@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //Receta para una funcion flecha sin dolor
+
+        //las arrow function cumplen dos objetivos. El primero, escribir menos. El segundo es reducir el ambito, es decir, reducir {} (haduken code).Hace el codigo mas legible.
+
+        //NO TODAS LAS FUNCIONES MERECEN LA PENA CONVERTIRLAS EN ARROWS FUNCTION
+
+        // Paso 0: necesitamos partir de una funcion anonima expresiva anónima. Si tenemos una funcion declarativa, hay que pasarla a expresiva.
+
+        // Paso 1: Quito la palabra function y la sustituyo por una flecha ( => ) situandola por detras de los parentesis
+
+        // Paso 2: Solo si la funciona recibe un unico parametro, ni cero ni mas de uno, se pueden quitar los parentesis de los parametros.
+
+        // Paso 3: Si la funcion tiene o ejecuta una sola linea de código, una unica accion, se puede quitar las llaves de la funcion. OJO, si esa linea es un return se debe OBLIGATORIAMENTE quitar la palabra return.
+
+        /* function sumar(n1, n2){
+            let resultado = n1 + n2;
+            console.log(resultado);
+            
+        } */
+
+        /* const sumar = function (n1,n2) {
+            let resultado = n1 + n2;
+            console.log(resultado);
+        } */
+
+        /* const sumar = (n1, n2) => {
+            let resultado = n1 + n2;
+            console.log(resultado);
+        } */
+
+        const sumar = (n1, n2) => console.log(n1 + n2);
+
+
+        // crear una funcion que me diga si un numero es divisible por 3 o no es divisible por tres
+
+        const div = (n1, n2) => (n1 % n2 === 0);
+        console.log(div(12, 3))
+
+    </script>
+</body>
+
+</html>
