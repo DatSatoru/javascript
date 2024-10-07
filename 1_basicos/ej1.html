@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olimpico</title>
+</head>
+
+<body>
+
+    <script>
+
+        //Dados 54321 segundos teneis que calcular cuantos horas, minutos y segundos equivalen dicha cantidad 
+
+        var segundos = 65789;
+        var horas = 0;
+        var minutos = 0;
+        var segundosRestantes = 0;
+
+        horas = segundos / (60 * 60)
+
+        segundosRestantes = segundos % (60 * 60);
+        minutos = segundosRestantes / 60;
+
+
+        segundosRestantes = segundosRestantes % 60
+
+        // reglas de parseo parseInt coge la parte entera del numero parseFloat conviernte un numero o cadena en un racioal
+        console.log(parseInt(horas)) //15 horas
+        console.log(parseInt(minutos)) // 5 minutos
+        console.log(parseInt(segundosRestantes)) //21 segundos
+
+
+
+    </script>
+
+</body>
+
+</html>

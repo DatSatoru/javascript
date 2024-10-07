@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+</head>
+
+<body>
+
+    <script>
+        // Switch me permite evaluar casos y devolver un resultado en funcion de esos casos. Inicialmente se diferencia de if en que SOLO se evalua la existencia del elemento o valor evaluar. Si existe se entra en el condicional y si no, no se entra.
+
+        // traductor de colores castellano -> ingles
+
+        var color = prompt('Dime un color en castellano: ').toLowerCase()
+
+
+        switch (color) {
+
+            case "bermellón":
+            case "bermellon":
+            case "rojo":
+                alert('red');
+                break;
+
+            case "azul":
+                alert('blue');
+                break;
+
+            case "amarillo":
+                alert('yellow');
+                break;
+
+            case "violeta":
+                alert('violet');
+                break;
+
+            //no es obligatoria
+            default:
+                alert('el color no esta en mi diccionario')
+                break;
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

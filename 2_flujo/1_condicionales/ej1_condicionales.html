@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo condicionales</title>
+</head>
+
+<body>
+
+    <script>
+
+        var animalFavorito = prompt('Dime tu animal favorito');
+        animalFavorito = animalFavorito.toLowerCase();
+
+        if (isNaN(Number(animalFavorito))) {
+            if (animalFavorito === "gato" || animalFavorito === "perro") {
+                alert('te gustan las mascotas, probablemente tengas una')
+            } else if (animalFavorito === "" || animalFavorito === "no tengo") {
+                alert('no te gustan los animales')
+            } else if (animalFavorito !== 'gato' && animalFavorito !== 'perro') {
+                alert('te gusta el zoo pero no tienes mascota')
+            }
+        } else {
+            alert('has introducido un valor no valido')
+        }
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

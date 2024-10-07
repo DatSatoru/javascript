@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .cuadrado {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <script>
+
+        //quiero un pintar un cuadrado negro de 100px en cualquier posicion del escenario o bien que yo elija o bien que sea de forma aleatoria.
+
+        /* var positionX = prompt('Dime la posicion del objeto en eje x: ')
+        var positionY = prompt('Dime la posicion del objeto en eje y: ') */
+
+        var positionX = Math.random() * window.innerWidth;
+        var positionY = Math.random() * window.innerHeight;
+        document.write(`<div class="cuadrado" style="top:${positionY}px; left:${positionX}px"></div>`)
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operador ternario</title>
+</head>
+
+<body>
+
+    <script>
+
+        // operador ternario: se llama ternario por tiene TRES PARTES. Si una varible toma un valor distinto dentro de una estructura condicional BINARIA (secuencia de escape), se puede considerar un operador ternario.
+
+        //pintar un circulo o cuadrado.
+
+        var poligono = prompt('Que quieres pintar: cuadrado o circulo').toLowerCase();
+
+        var radio = "";
+
+        if (poligono === 'circulo') {
+            radio = '50%'
+        } else {
+            radio = '0%'
+        }
+
+        //operador ternario
+
+        // var variable = (condicion) ? (valor si se cumple) : (valor si no se cumple);
+
+        var radio2 = (poligono === 'circulo') ? '50%' : '0%';
+
+    </script>
+
+</body>
+
+</html>

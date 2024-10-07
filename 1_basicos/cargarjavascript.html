@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carga de javascript</title>
+    <!-- ZONA 1 - final head justos antes del cierre de dicha etiqueta -->
+    <!-- javascript no tiene acceso al html -->
+    <script>
+        // todo lo que haya aqui dentro es codigo javascript
+        alert('hola')
+        // document.querySelector('h1').textContent = 'Juan Antonio'
+    </script>
+    <script src="./js/externo_cabecera.js"></script>
+</head>
+
+<body>
+
+    <h1>Titulo de la pagina</h1>
+
+    <!-- ZONA 2 - final body justos antes del cierre de dicha etiqueta -->
+    <!-- javascript si tiene acceso al html -->
+    <script>
+        // todo lo que haya aqui dentro es codigo javascript
+        // document.querySelector('h1').textContent = 'Juan Antonio'
+    </script>
+    <script src="./js/externo_footer.js"></script>
+</body>
+
+</html>

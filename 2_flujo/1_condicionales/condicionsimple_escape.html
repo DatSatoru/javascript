@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicional simple con secuencia de escape</title>
+</head>
+
+<body>
+
+    <script>
+
+        // condicional con secuencia de escape. Solo se debe usar cuando sepamos que nuestra respuesta es completamente binaria.
+
+        // la secuencia no deberia ser tratada como posible respuesta de mi programa, una secuencia de escape es un valor no espera. 
+
+        var nota = -2;
+
+        //no es correcto 
+        if (nota >= 0 && nota < 5) {
+            alert('suspendido')
+        } else {
+            alert('valor no esperado')
+        }
+
+
+        //solo debemos usar un condicional simple con secuencia si nuestra solución es binaria
+
+        var encencido = false
+
+        if (encencido) {
+            alert('el enchufe esta encendido')
+        } else {
+            alert('el enchufe esta apagado')
+        }
+
+    </script>
+
+</body>
+
+</html>

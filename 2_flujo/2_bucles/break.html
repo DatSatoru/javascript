@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Break </title>
+</head>
+
+<body>
+    <script>
+
+        // break me saca del bucle cuando se ejecuta.
+        var numero = Number(prompt('Dame un numero: '))
+
+
+        for (var i = 1; i <= 10; i++) {
+            if (i === numero) {
+                break;
+            }
+            console.log(i);
+        }
+
+        //continue que no me saca del bucle pero salta esa iteracion
+        console.log('--------')
+
+        for (var i = 1; i <= 10; i++) {
+
+            if (i % 2 !== 0) {
+                continue;
+            }
+            console.log(i)
+        }
+
+    </script>
+</body>
+
+</html>

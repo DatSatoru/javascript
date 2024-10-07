@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //pedir un numero por pantalla y sacar el factorial de dicho numero.
+
+        // 5 * 4 * 3 * 2 * 1 = 120
+
+        // paso 1: pedir el numero por pantalla ✅
+        // paso 2: contar desde ese numero hasta 1 ✅
+        // paso 3: guardar el resultado de multiplicar esos numeros
+        // paso 4: Sacarlo por pantalla.
+
+        // a parte de intentar sacar por ejemplo el factorial de 6 -> 720
+        // tambien pintarme la serie  6 5 4 3 2 1
+
+
+        var numero = Number(prompt('Dame un numero: '))
+        var resultado = 1;
+        var serie = "";
+
+        for (var i = numero; i >= 1; i--) {
+            resultado = resultado * i
+            serie = serie + i + " "
+        }
+
+        console.log(resultado)
+        console.log(serie)
+
+        document.write(`<h1>El factorial del numero ${numero} es ${resultado} y su serie seria ${serie}</h1>`)
+
+
+
+    </script>
+
+</body>
+
+</html>

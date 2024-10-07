@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 5 Casa</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+
+        }
+
+        .circulo {
+            background-color: red;
+            border-radius: 50%;
+            margin: 0 auto;
+        }
+
+        .cuadrado {
+            background-color: blue;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+
+        //Quiero pintar 10 poligonos, cada poligono tendrá dentro un numero aleatorio entero entre 0 y 100, si ese numero es divisible por 3 el poligono es un circulo y si no un cuadrado.
+
+        var numerPoligonos = 10;
+
+        for (var i = 1; i <= numerPoligonos; i++) {
+            var numeroAletorio = parseInt(Math.random() * 101);
+            var clase = (numeroAletorio % 3 === 0) ? 'circulo' : 'cuadrado';
+
+            document.write(` <div class=${clase}>${numeroAletorio}</div>`)
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

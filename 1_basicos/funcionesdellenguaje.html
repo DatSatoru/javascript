@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones del lenguajes</title>
+</head>
+
+<body>
+
+    <script>
+
+        // prompt(): prompt me sirve como desarrollador para pedir elemento por pantalla, sustituye incialmente a un formulario de captura de texto, OJO es texto luego hay que convertirlo si por ejemplo necesitasmo un numero.
+
+        var numero1 = prompt('dame un numero');
+        console.log(typeof numero1) // string
+        numeroFinal = Number(numero1);
+        console.log(typeof numeroFinal) //number
+
+        // toLowerCase(), toUpperCase(), esta es un funcion de paradigma POO, pasar minuscula y mayusculas respectivamente. No modifica la variables original por eso necesito otra variable para almacenarlo.
+
+        var texto = "hOlA";
+        var minuscula = texto.toLowerCase()
+        var mayuscula = texto.toUpperCase()
+        console.log(texto, minuscula, mayuscula);
+
+        //funciones de parseo, parseo de numeros, conversion numerica, cadenas de caracteres
+
+        var numeroString = '22.45';
+        var racional = 4.56;
+        var numero = Number(numeroString); // 22.45 convertido a numero racional de tipo number
+        var entero = parseInt(racional); // 4
+        var parteEntera = parseInt(numeroString) // 22
+
+        var entero2 = 3;
+        var racional = parseFloat(entero2); // 3.00
+        var enteroString = String(entero2); // '3' 
+
+
+        //Math es un funcional de javascript que me permite hacer calculos matematicos complejos, Maximo, minimos, raiz cuadradas.
+        //https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Math
+
+        console.log(Math.PI) //3.1415....
+
+        //valor absoluto
+        console.log(Math.abs(-56.64)) // 56.64
+        //redondea a alta
+        console.log(Math.ceil(4.13)) //5
+        //redondea a baja
+        console.log(Math.floor(4.13)) //4
+        //redondea a matematico
+        console.log(Math.round(4.63)) //5
+
+        //me devuelve un numero aleatorio en 0 y 1 sin incluir el uno.
+        console.log(Math.random() * 101) //numero aletorio entre 0 y 100 por que el 101 no esta incluido
+
+        //problema matematico
+
+        var nota = 4.999999999999999999999999999;
+        //console.log(Math.trunc(nota)) // 5
+        //limitar en numero de decimal, conversion tipos.
+
+        var numero = 4.123656;
+        console.log(numero.toFixed(3)) // 4.123
+
+
+        //pedimos la nota 
+        var notaString = prompt('Dime la nota');
+        //ej: Juan Antonio
+        var nombre = "Juan Antonio";
+        console.log(nombre[5]) //A
+        var cortaNumero = notaString.substring(0, 6)
+        var nota = Number(cortaNumero);
+        console.log(nota);
+
+
+
+
+    </script>
+
+</body>
+
+</html>

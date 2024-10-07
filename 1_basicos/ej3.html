@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        //RECORDAR: html para javascript es puro texto, con javascript podemos modificar html pero nunca archivos css. 
+
+        //pedir pintar un circulo y poder elegir su color y su tamaño de diametro ambos pedidos por pantalla.
+
+        // 1 - sabeis pintar un circulo negro en html de cualquier tamaño por ejemplo 100px ✅
+        // 2 - cuando tengais el circulo pintado en html lo pasais a javascript, lo borrais del html y lo pintais en javascript con document.write() ✅
+        // 3 - localizais dentro del document.write los elementos variables y los sustituis por variables con la tecnica de template literal. ✅
+        // 4 - pedis los datos por pantalla y veis el resultado. ✅
+
+        var color = prompt('Dime un color en ingles: ');
+        var ancho = prompt('Dme un ancho del mi circulo: ');
+        document.write(`<div style="width:${ancho}px; background-color: ${color}; height: ${ancho}px; border-radius:50%"></div>`)
+
+    </script>
+
+</body>
+
+</html>

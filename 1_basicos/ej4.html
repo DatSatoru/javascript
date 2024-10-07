@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .circulo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        .cuadrado {
+            width: 100px;
+            height: 100px;
+        }
+
+        .rectangulo {
+            width: 200px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <script>
+
+        //quiero una aplicacion que me permita simplemente pintar un circulo de 100px o un cuadrado 100px del color que yo quiera. Ambas elecciones se piden por pantalla.     
+
+        var poligono = prompt('Dime que es lo que quieres dibujar, cuadrado o circulo').toLowerCase();
+        var color = prompt('Dime de que color: ').toLowerCase();
+
+
+        document.write(`<div class="${poligono}" style="background-color: ${color}"></div>`)
+
+
+
+    </script>
+
+</body>
+
+</html>

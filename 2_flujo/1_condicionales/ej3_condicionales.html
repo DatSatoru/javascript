@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio 3</title>
+    <style>
+        .cuadrado {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            color: white;
+            font-size: 200%;
+            align-content: center;
+            text-align: center;
+        }
+
+        .rojo {
+            background-color: red;
+        }
+
+        .verde {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        // pedir dos numeros aleatorios entre 0 y 100
+        // multiplicar dicho numeros
+        // si el resultado de la multiplicacion es un numero par pintar un cuadrado de color verde con el numero dentro.
+        // si el resultado de la multiplicacion es un numero impar pintar un cuadrado de color rojo sin el numero dentro.
+
+
+        var numero1 = Math.random() * 101;
+        var numero2 = Math.random() * 101;
+        var resultado = parseInt(numero1 * numero2);
+        var color = (resultado % 2 === 0) ? 'verde' : 'rojo';
+        var numero = (resultado % 2 === 0) ? String(resultado) : "";
+        document.write(`<div class="cuadrado ${color}">${numero}</div>`)
+
+        /*
+        if (resultado % 2 === 0) {
+            color = 'verde'
+            numero = String(resultado);
+        } else {
+            color = 'rojo'
+            numero = ""
+        }
+        */
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio 6</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+
+        //Escribir un programa donde el usuario elija entre lo siguiente ¿Qué desea cenar? Y pueda poner dos opciones Carne o Pescado
+        //Y luego se le pregunte también si desea o no postre
+
+        /*
+            - Si eligió cenar Carne-> pago 23 €
+            - Si eligió cenar Pescado->pago 15 €
+            - Si tomo postre->el postre valió 3 €
+
+        */
+
+        /*
+        
+            - Calcular el valor total de la cena dependiendo de las opciones que elija por teclado el usuario, incluyendo una propina del 6%
+        
+
+            Si no elige carne o pescado, le  dirá error y volverá ha hacer la pregunta de nuevo.
+            
+        */
+
+        for (var i = 1; i <= 100; i++) {
+
+            var plato = prompt('Dime que quieres de cenar, carne o pescado?').toLowerCase();
+            var postre = confirm('Quieres postre?');
+
+            if (plato !== 'carne' && plato !== 'pescado') {
+                continue;
+            }
+
+            var precioPlato = (plato === 'carne') ? 23 : 15;
+            var precioPostre = (postre) ? 3 : 0;
+
+            var subtotal = precioPlato + precioPostre
+            var comanda = subtotal + (subtotal * 0.06);
+            alert(comanda);
+
+            break;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+
+<body>
+
+    <script>
+
+        //pedir por pantalla un precio, un impuesto y calcular PVP con dos decimales.
+
+        // precio = 1000 impuesto = 21 resultado = 1000 + (1000 * (21 /100)) = 1210,23
+
+        var precio = Number(prompt('Dime el precio del producto: '))
+        var impuesto = Number(prompt('Dime el impuesto a aplicar: '))
+
+        var resultado = precio + (precio * (impuesto / 100));
+        resultado = resultado.toFixed(2);
+
+        console.log(resultado);
+
+        //para pintar en el html hasta que manejos DOM el modelo de objetos de javascript html vamos a usar la funcion document.write()
+
+        document.write(`<h1>El PVP de un producto de ${precio} euros con el ${impuesto}% de iva es ${resultado}</h1>`)
+
+
+    </script>
+
+</body>
+
+</html>
