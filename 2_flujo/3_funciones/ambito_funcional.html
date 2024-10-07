@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambito funcional</title>
+</head>
+
+<body>
+
+    <script>
+
+        //ambito funcional: Es el que tiene todos los lenguajes de programacion. Una variable creada dentro de un función , solo existe dentro de esa funcion, es lo se denomina ambito local, nace y muere dentro de la funcion. Una variable creada fuera de la funcion es de ambito global.
+
+        //ambito local: solo lo podemos usar dentro de su ambito no existe fuera.
+        //ambito global: se puede usar dentro de cualquier bloque de codigo, incluidas funciones.
+
+        // en javascript conocemos el ambito con el codigo que esta dentro de las {}, el ambito funcional es el codigo dentro de la {} de una funcion.
+
+        var nombre = 'Juan Antonio'; //global
+        var edad = 42; //global
+
+        function saludar() {
+            var apellido = 'Perez'; //Local se genera dentro de la fucnion y muere dentro de ella.
+            console.log(nombre, edad, apellido);
+        }
+
+        saludar()
+        //ERROR console.log(apellido);
+
+        if (nombre === 'Pepe') {
+            var ciudad = 'Madrid' //global
+        }
+
+        console.log(ciudad);
+
+        for (var i = 1; i <= 10; i++) {
+            console.log(i)
+        }
+
+        for (var j = 1; j <= 10; j++) {
+            console.log(j)
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

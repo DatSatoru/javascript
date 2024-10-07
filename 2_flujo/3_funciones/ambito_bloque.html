@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambito de bloque</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //funcion exactamente igual que el ambito funcional pero para todos los bloques de codigo {}. Toda variable creada dentro de for, if , function es de ambito local.
+
+        var nombre = 'Juan Antonio' //global
+        let ciudad = "Madrid" // global
+        const grados = 9.8; //global
+
+        ciudad = "cartagena"
+        // error grados = 11;
+
+        if (ciudad === 'cartagena') {
+            var apellido = 'Perez' //global
+            let precio = 39.90  //local
+            const gravedad = 9.8 //local
+
+        }
+
+        function saludar() {
+            var dato = 0; //local
+            let peso = 80 // local
+            const pi = 3.1415 //local
+        }
+
+        for (let i = 0; i <= 10; i++) {
+
+        }
+
+
+        for (let i = 0; i <= 10; i++) {
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>

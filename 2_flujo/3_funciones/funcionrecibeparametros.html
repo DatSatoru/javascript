@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcion que recibe parametros</title>
+</head>
+
+<body>
+    <script>
+        var numero1 = 2;
+        var numero2 = 4;
+
+        //dentro de una funcion puedo recibir parametros obligatorios y parametros optativos. todos los parametros obligatorios van primero y los optativos, van despues
+
+        function sumar(numero1, numero2 = 2) {
+            var resultado = numero1 + numero2;
+            console.log(resultado);
+        }
+
+        sumar(2, 3);
+        sumar(13)
+
+    </script>
+</body>
+
+</html>

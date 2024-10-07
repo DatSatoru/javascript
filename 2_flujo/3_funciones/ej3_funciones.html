@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones 3 ejercicio</title>
+</head>
+
+<body>
+
+    <script>
+
+        // escribir una funcion que me permita restar dos numeros cualquiera y pintarlo en el html si el resultado es positivo el numero saldra en verde y si es negativo el rojo.
+
+        function restar(numero1, numero2) {
+            var resultado = numero1 - numero2;
+            var color = (resultado >= 0) ? 'green' : 'red'
+            document.write(`<h1>El resultado de restar ${numero1} y ${numero2} es <span style="color: ${color}">${resultado}</span>`);
+        }
+
+        restar(2, 12)
+        restar(102, 45)
+
+    </script>
+
+</body>
+
+</html>

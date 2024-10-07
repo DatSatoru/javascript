@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* while(condition){
+        }
+        */
+
+        /* Mientras que: permite repetir un conjunto de sentencias un numero determinado de veces. La diferencia con el for es que es mas facil cometer un bucle infinito. Por contra, es un bucle mas versatil ya que permite todo tipo de condiciones y podemos jugar con el punto donde la condicion cambia
+        
+        
+        for(var i= 1; i<=10; i++){
+
+        }
+        */
+        var i = 1;
+
+        while (i <= 10) {
+            console.log('entro')
+            i++;
+        }
+
+        var decision = prompt('Dime un si o un no');
+        var contador = 0;
+
+        while (decision === 'no') {
+            contador++;
+            if (contador === 100) {
+                decision = 'si'
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>

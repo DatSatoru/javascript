@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJ7</title>
+    <style>
+        .circulo {
+            background-color: red;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="circulo" style="width: 100px; height: 100px;"></div> -->
+    <script>
+        // pedir un numero de circulos por pantalla. el ancho de cada circulo y pintarlos siempre y cuando el numero de circulos sea impar. Si no es impar vuelve a empezar de nuevo el ejercicio
+
+        do {
+            var circulos = Number(prompt('Dime el numero de circulos impares'));
+        } while (circulos % 2 === 0);
+
+        var ancho = prompt('Dime el ancho del circulo');
+
+        for (i = 1; i <= circulos; i++) {
+
+            document.write(`<div class="circulo" style="width: ${ancho}px; height: ${ancho}px;"></div>`)
+
+        }
+
+    </script>
+</body>
+
+</html>

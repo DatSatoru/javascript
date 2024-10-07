@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // hacer un programa que me permita calcular restas, sumas, restas, multiplicaciones de dos numeros cualquiera
+
+        function sumar(numeroA, numeroB) {
+            return numeroA + numeroB;
+
+        }
+
+        function restar(numeroA, numeroB) {
+            let resultado = numeroA - numeroB;
+            return resultado;
+        }
+
+        function multiplicar(numeroA, numeroB) {
+            return numeroA * numeroB;
+        }
+
+        function calcular(n1, n2, tipo) {
+            let resultado = 0;
+            switch (tipo) {
+                case 'sumar':
+                    //sumar
+                    resultado = sumar(n1, n2);
+                    break;
+
+                case 'restar':
+                    //restar
+                    resultado = restar(n1, n2);
+                    break;
+
+                case 'multiplicar':
+                    //multiplicar
+                    resultado = multiplicar(n1, n2);
+                    break;
+
+                default:
+                    //accion si la operacion no es valida
+                    break;
+            }
+            console.log(resultado);
+        }
+    </script>
+</body>
+
+</html>

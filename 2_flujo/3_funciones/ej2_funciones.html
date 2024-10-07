@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJ2_funciones</title>
+</head>
+
+<body>
+    <script>
+        // hacer un programa que me permita saber cual es el numero mas alto de dos posibles
+
+        function maximo(num1, num2) {
+
+            /*  var max = (num1 > num2) ? `${num1} es el numero mayor.` : `${num2} es el numero mayor`; */
+
+            var max = '';
+            if (num1 > num2) {
+                max = `${num1} es el numero mayor.`
+            } else if (num1 < num2) {
+                max = `${num2} es el numero mayor.`
+            } else if (num1 === num2) {
+                max = `Los dos numeros son iguales.`
+            } else {
+                max = `Los valores son erroneos`
+            }
+            console.log(max);
+        }
+
+        maximo(25, 'ho');
+    </script>
+</body>
+
+</html>
