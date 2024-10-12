@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/data.js"></script>
+</head>
+
+<body>
+    <script>
+        // Crear un funcion que me pinten los animales en el html marcando con estilos de alguna manera que querais la peligrosidad del animal , por ejemplo con colores rojo, amarillo , verde 
+        // Filtrar los animales mas peligrosos siendo 5 el mayor indice de peligrosidad.
+        // Filtrar los animales que esten entre 10 y 400kg
+
+        //Paso 1: Filtar animales peligrosidad
+        //Paso 2: Filtrar animales peso
+        //Paso 3: Pintar un Animal
+
+        const filterMuyPeligrosos = function (animalList, color = 'red') {
+            return animalList.filter(animal => animal.peligrosidad === 5)
+        }
+
+        const filterPeligrosos = function (animalList, color = 'yellow') {
+            return animalList.filter(animal => animal.peligrosidad <= 4 && animal.peligrosidad > 1)
+        }
+
+        const filterNoPeligrosos = function (animalList, color = 'green') {
+            return animalList.filter(animal => animal.peligrosidad === 1)
+        }
+
+        let animalesMuyPeligrosos = filterMuyPeligrosos(zooMadrid)
+        let animalesPeligrosos = filterPeligrosos(zooMadrid)
+        let animalesNoPeligrosos = filterNoPeligrosos(zooMadrid)
+
+
+        const filterPeso = function (animalList, minPeso, maxPeso) {
+            return animalList.filter(animal => animal.peso >= minPeso && animal.peso <= maxPeso)
+        }
+
+        console.log(filterPeso(zooMadrid, 10, 1900))
+
+        function getColorAndTitle(tipo) {
+            let arrayTipos = [{ titulo: 'Todos los animales', color: 'blue' }, { titulo: 'Muy Peligrosos', color: 'red' }, { titulo: 'Peligrosos', color: 'yellow' }, { titulo: 'No peligrosos', color: 'green' }]
+            return arrayTipos[tipo]
+        }
+
+        function pintarUnAnimal(animal, color) {
+            return `<li>${animal.especie} - Peso: ${animal.peso}kg - Peligrosidad: <span style="color: ${color}">${animal.peligrosidad}</span></li> <img src="${animal.foto}">`
+        }
+
+        function pintarAnimales(listaAnimales, tipo = 0) {
+            let html = `<h3>${getColorAndTitle(tipo).titulo}</h3><ul>`
+            listaAnimales.forEach(animal => html += pintarUnAnimal(animal, getColorAndTitle(tipo).color))
+            html += '</ul>'
+            document.write(html)
+        }
+
+        pintarAnimales(filterPeso(zooMadrid, 200, 2000))
+
+
+    </script>
+
+</body>
+
+</html>
