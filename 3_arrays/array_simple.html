@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array simple</title>
+</head>
+
+<body>
+    <!-- <h2>Animales</h2>
+    <ul>
+        <li>Fresa</li>
+        <li>Manzana</li>
+        <li>Platano</li>
+    </ul> -->
+    <script>
+
+        // un array es una lista de elementos casi siempre del mismo tipo.
+
+        //Declarar o crear arrays.
+        const nombres = [] //array vacio creado de forma funcional
+        const apellidos = new Array() // array vacio creado de forma POO.
+
+        //Declarar un array con datos
+        const animales = ['leon', 'gato', 'periquito'];
+        const frutas = new Array('Fresa', 'Manzana', 'Platano');
+        const numeros = [1, 2, 3, 4, 5];
+        const cosas = [true, 1, 'Mario'];
+
+        console.log(animales);
+        console.log(frutas);
+
+        //acceder a elementos dentro del array. Se accede por posicion.
+        console.log(animales[2]) //periquito
+        animales[1] = 'rata';
+        console.log(animales)
+
+        for (let i = 0; i < frutas.length; i++) {
+            console.log(frutas[i]);
+        }
+
+        //me gustaria pintar el listado de animales en un listado UL de html dentro del body.
+
+        function pintarLista(lista, titulo) {
+            let html = `<h2>${titulo}</h2><ul>`;
+            for (let i = 0; i < lista.length; i++) {
+                html += `<li>${lista[i]}</li>`
+            }
+            html += '</ul>'
+            document.write(html)
+        }
+
+        pintarLista(animales, 'Animales')
+        pintarLista(frutas, 'Frutas')
+        pintarLista(cosas, 'Cosas')
+
+
+
+    </script>
+
+</body>
+
+</html>

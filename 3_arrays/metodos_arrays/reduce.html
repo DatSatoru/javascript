@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reduce</title>
+</head>
+
+<body>
+
+    <script>
+
+        // REDUCE: es un metodo intenta reducir un array a un unica expresion.
+
+        const precios = [12, 2, 34, 56, 7, 8, 9]
+
+        // este array es un carrito de la compra. Tengo que calcular el valor total del precio del carrito.
+
+        const costeTotal = precios.reduce((acumulador, valorActual) => acumulador + valorActual)
+
+        console.log(costeTotal)
+
+        const palabras = ['a', 'b', 'c', 'd', 'e', 'f', 'g']  // 'abcd'  
+
+        const concatenacion = palabras.reduce((prev, current) => {
+            if (prev === 'abcd') {
+                return prev
+            }
+            return prev + current
+        })
+
+        console.log(concatenacion)
+
+        //___________________________
+
+        const productos = [
+            { title: 'pantalon vaquero azul', precio: 40 },
+            { title: 'camisa de lino roja', precio: 30 },
+            { title: 'calcetines de algodon azules', precio: 20 },
+            { title: 'Bermudas azuladas', precio: 10 },
+        ]
+
+        const costeTotalProductos = productos.reduce((total, productoActual) => total + productoActual.precio, 0)
+        console.log(costeTotalProductos)
+
+    </script>
+
+</body>
+
+</html>

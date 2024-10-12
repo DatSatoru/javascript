@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splice o toSpliced</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //splice: Modifica el array original por elimina el elemento en cualquier posicion. Recalcula las posiciones de los demas que quedan dentro del array.
+
+
+        // splice recibe dos parametros, el primero es la posicion desde la que quiero empezar a borrar y el segundo la cantidad de elementos que quiero borrar desde esa posicion 
+
+        const animales = ['León', 'Gato', 'Perro', 'Periquito', 'Aguila', 'Cuervo', 'Elefante', 'jirafa'];
+
+        let animalesBorrados = animales.splice(4, 1) // aguila
+
+        console.log(animalesBorrados)
+        console.log(animales)
+
+        //pero si tuvieros que simular con splice un pop()  y shift()
+        // animales.splice(0,1) => shift
+        // animales.splice(animales.length - 1 ,1) => shift
+
+
+        // toSpliced(posicionInicial, cantidad) borrar los elementos que le digas y te devuelve siempre un array sin esos elementos que tu le has dicho. Tienen que ser elementos consecutivos. No modifica el array orignal
+
+        const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+        const arrayNuevo = numeros.toSpliced(3, 4, 'hola', 'adios')
+
+        console.log(numeros)
+        console.log(arrayNuevo)
+
+    </script>
+</body>
+
+</html>

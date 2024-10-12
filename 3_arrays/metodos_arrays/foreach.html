@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forEach</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        const valores = [1, 2, 45, 65, 23, 5, 7, 84, 24, 100, 23];
+        const alumnos = [
+            { nombre: 'Juan Antonio', edad: 42 },
+            { nombre: 'Lucia', edad: 26 },
+            { nombre: 'Maria', edad: 12 },
+            { nombre: 'Rodrigo', edad: 27 },
+        ]
+
+        // Foreach es una funcion que me permite recorrer un array completo, recorrer todos sus elementos. Es igual que tener un for of.  Al tener un callback y poder poner como funcion flecha reducimos el ambito. NO DEVUELVE NADA.
+
+        let ul = '<ul>'
+        valores.forEach(valor => ul += `<li>${valor}</li>`)
+        ul += '</ul>'
+
+
+        document.write(ul)
+
+        function pintarUnAlumno(alumno) {
+            let p = `<p>${alumno.nombres} - ${alumno.edad}</p>`;
+            document.write(p)
+        }
+
+        function pintarAlumnos(listaAlumnos) {
+            listaAlumnos.forEach((alumno, index) => pintarUnAlumno(alumno))
+        }
+
+        pintarAlumnos(alumnos)
+
+
+    </script>
+
+</body>
+
+</html>

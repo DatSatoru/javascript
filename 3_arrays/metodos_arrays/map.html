@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+
+<body>
+
+    <script>
+
+        // MAP: aplicar a cada de elemento del array la misma operacion. Ojo no necesariamente tiene que ser matematica. No modifica el array original con lo que devuelve el un array nuevo con el resultado del mapeo.
+
+        const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        const ciudades = ['MADRID', 'BARCELONA', 'SEVILLA', 'VIGO', 'MALAGA'];
+
+        // 1 ejercicio: Del array numeros quiero sacar un listado de dobles.
+        const dobles = numeros.map(numero => numero * 2)
+        console.log(dobles)
+
+        // 2 ejercicio: Pasar todo array a minusculas
+        const ciudadMinusculas = ciudades.map(ciudad => ciudad.toLowerCase())
+        console.log(ciudadMinusculas)
+
+        // 3 ejercicio Del array de ciudades necesito que me saqueis todas las ciudad escritas de esta forma Madrid
+
+        const ciudadesCapitulares = ciudades.map(ciudad => capitalize(ciudad.toLowerCase()))
+
+        function capitalize(ciudad) {
+            return ciudad[0].toUpperCase() + ciudad.slice(1, ciudad.length)
+        }
+
+        console.log(ciudadesCapitulares)
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 arrays</title>
+</head>
+
+<body>
+
+    <script>
+
+        //pedir 10 numeros por pantalla y que calcules la suma de todos
+
+        //es obligatorio al menos 2 funciones
+        //cargarDatos no se pueden usar bucles.
+        //calcularSuma
+
+        function cargarDatosBucle(cantidad) {
+            const listaNumeros = [];
+            for (i = 0; i < cantidad; i++) {
+                listaNumeros[i] = Number(prompt('Dame un numero: '));
+            }
+            return listaNumeros
+        }
+
+        function cargarDatosRecursivo(cantidad, contador = 0, lista = []) {
+            lista[contador] = Number(prompt('Dime un numero: '));
+            contador++;
+            if (contador < cantidad) {
+                return cargarDatosRecursivo(cantidad, contador, lista)
+            } else {
+                return lista;
+            }
+        }
+
+
+        const calcularSuma = lista => {
+            let resultado = 0;
+            for (let i = 0; i < lista.length; i++) {
+                resultado += lista[i];
+            }
+            console.log(resultado);
+        }
+
+
+        const listaFinal = cargarDatosBucle(10)
+        calcularSuma(listaFinal);
+
+
+
+    </script>
+
+</body>
+
+</html>

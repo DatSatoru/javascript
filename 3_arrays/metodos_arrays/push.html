@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUSH</title>
+</head>
+
+<body>
+
+    <script>
+
+        //push: Me permite introducir elementos por el final del array, es decir por la ultima posicion disponible.
+        // sirve para cualquier tipo de array.
+        // devuelve tiene un return que me da la longitud nueva del array.
+        // se puede hacer push de uno o mas elementos separados por comas.
+
+        const animales = ['León', 'Gato', 'Perro', 'Periquito']
+
+        let nuevoAnimal = 'Cuervo'
+        let nuevoAnimal2 = 'Aguila'
+
+        animales.push(nuevoAnimal);
+        console.log(animales)
+
+        let longitud = animales.push(nuevoAnimal2, 'hipopotamo')
+        console.log(animales)
+        console.log(longitud)
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

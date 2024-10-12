@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slice</title>
+</head>
+
+<body>
+
+    <script>
+
+        //slice: capturar o hacer un copia de un array o parte de un array. Ojo no modifica el array original, solo copia una cantidad de elementos o todos.
+        // slice: recibe dos paremetro, el primer parametro la posicion desde la que parto. El segundo parametro la posicion hasta la que copia, pero sin incluirla.
+
+        const animales = ['León', 'Gato', 'Perro', 'Periquito', 'Aguila', 'Cuervo', 'Elefante', 'jirafa'];
+        const aves = animales.slice(3, 6)
+        console.log(aves)
+        console.log(animales)
+
+        //ultimo elemento
+        const ultimoElemento = animales.slice(animales.length - 1, animales.length)
+        console.log(ultimoElemento)
+        // admite numeros negativos
+        const ultimoElemento2 = animales.slice(-1)
+        console.log(ultimoElemento2)
+
+
+        console.log(animales.slice(-5, -2))
+
+
+    </script>
+
+</body>
+
+</html>

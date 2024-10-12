@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json Avanzado </title>
+</head>
+
+<body>
+
+
+    <script>
+
+        producto = {
+            titulo: 'Leche desnatada',
+            precio: 1.5,
+            categoria: 'lacteos',
+            ingredientes: ['leche de vaca', 'fermentos lacticos', 'azucar'],
+            origen: {
+                pais: 'España',
+                comunidad: 'Galicia',
+                crianza: {
+                    alimentacion: 'pastos',
+                    guarda: 'libertad'
+                }
+            },
+            cantidad: 1.75,
+            impuesto: 4,
+
+            getPrecio: function () {
+                return (this.precio * this.cantidad)
+            },
+            getpvp: function () {
+                return this.getPrecio() + (this.getPrecio() * this.impuesto) / 100
+            }
+        }
+
+        console.log(producto.titulo)
+        console.log(producto.ingredientes[0])
+        console.log(producto.origen.comunidad)
+        console.log(producto['origen']['crianza']['alimentacion'])
+        console.log(producto.origen.crianza.guarda)
+        console.log(producto.getpvp())
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucle for of</title>
+</head>
+
+<body>
+
+    <script>
+
+        const animales = ['Tigre', 'Leon', 'Rana', 'Aguila', 'Rinoceronte', 'jirafa', 'Perro', 'Guepardo'];
+
+        for (let animal of animales) {
+            console.log(animal)
+        }
+
+        //me podeis hacer un funcion pintarListaAnimales que me pinte la lista en un listado numerado en html
+
+        function pintarAnimales(listaAnimales) {
+            let ol = '<ol>'
+            for (let animal of listaAnimales) {
+                ol += `<li>${animal}</li>`
+            }
+            ol += '</ol>'
+            document.write(ol)
+        }
+
+        pintarAnimales(animales)
+
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find</title>
+</head>
+
+<body>
+
+    <script>
+
+        //FIND es un método que se puede aplicar a cualquier array. Me permite buscar elementos dentro de un array. Me devuelve el primer elemento que cumple la funcion de condicion (un elemento no un array). Si no encuentra nada devuelve un elemento vacio.
+
+        const valores = [1, 2, 45, 65, 23, 5, 7, 84, 24, 100, 23];
+
+        // me gustaria obtener el primer numero divisible por 3 => 45
+
+        let numeroDivisiblePor3 = valores.find(numero => numero % 3 === 0)
+
+        console.log(numeroDivisiblePor3)
+
+
+        //alumnos
+
+        const alumnos = [
+            { nombre: 'Juan Antonio', edad: 42 },
+            { nombre: 'Lucia', edad: 26 },
+            { nombre: 'Maria', edad: 12 },
+            { nombre: 'Rodrigo', edad: 27 },
+        ]
+
+
+        //buscar un alumno que este entre 30 y 40 años
+
+        /*
+         const alumno = alumnos.find(function(alumno) {
+                return  alumno.edad  >= 20 && alumno.edad <= 30)
+         }   
+        */
+        const alumno = alumnos.find(alumno => alumno.edad >= 20 && alumno.edad <= 30)
+
+        console.log(alumno);
+
+        function buscarUnAlumnoPorEdad(lista, edadMin, edadMax) {
+            return lista.find(alumno => alumno.edad >= edadMin && alumno.edad <= edadMax)
+        }
+
+        /*
+        const buscarUnAlumnoPorEdad = (lista, edadMin, edadMax) => lista.find(alumno => alumno.edad >= edadMin && alumno.edad <= edadMax)
+        */
+
+        /* 
+        function buscarUnAlumnoPorEdad(lista, edadMin, edadMax) {
+            const busqueda = {}
+            for (let alumno of lista) {
+                if (alumno.edad >= edadMin && alumno.edad <= edadMax) {
+                    busqueda = alumno;
+                    break;
+                }
+            }
+        }
+            */
+
+
+        let alumno1 = buscarUnAlumnoPorEdad(alumnos, 20, 30)
+        let alumno2 = buscarUnAlumnoPorEdad(alumnos, 10, 20)
+
+        console.log(alumno1)
+        console.log(alumno2)
+
+
+
+
+    </script>
+
+</body>
+
+</html>

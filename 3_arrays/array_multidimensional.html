@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+
+    // array multidimensional es un array de arrays. Los elementos del array principal son tambien arrays.
+
+    const aves = ['aguila', 'paloma', 'periquito'];
+    const felinos = ['tigre', 'leon', 'pantera', 'lince'];
+    const reptiles = ['rana', 'sapo', 'cocodrilo']
+    const zoo = [felinos, aves, reptiles];
+
+    //zoo es un array multidimensional
+
+    // console.log(zoo[1][2]) //periquito
+    //pantera
+    //console.log(zoo[0][2])
+    for (let i = 0; i < zoo.length; i++) {
+      for (let j = 0; j < zoo[i].length; j++) {
+        console.log(zoo[i][j]);
+      }
+    }
+    for (let especie of zoo) {
+      for (let animal of especie) {
+        console.log(animal);
+      }
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>includes</title>
+</head>
+
+<body>
+
+    <script>
+
+        //includes(), startWith(), endsWith(), son funciones que me permiten saber si un elemento esta incluido en otro, o que empieza por, o que termina por. Devuelve solo true o false
+
+        let frase = "En un lugar de la Mancha"
+        let palabra = 'mancha';
+
+        let estaIncluida = frase.toLowerCase().includes(palabra.toLowerCase())
+        let empiezaEn = frase.toLowerCase().startsWith('e')
+        let terminaEn = frase.toLowerCase().endsWith('o')
+        console.log(estaIncluida) //true
+        console.log(empiezaEn) //true
+        console.log(terminaEn) //false
+
+        // ------------------------------------------------------------- //
+
+        const animales = ['leon', 'gato', 'perro']
+        console.log(animales.includes('cuervo'))
+
+        // ------------------------------------------------------------- //
+
+        const productos = [
+            { title: 'pantalon vaquero azul', precio: 42 },
+            { title: 'camisa de lino roja', precio: 26 },
+            { title: 'calcetines de algodon azules', precio: 12 },
+            { title: 'Bermudas azuladas', precio: 27 },
+        ]
+
+        //quiero buscar ropa que sea de tonos azules.
+
+        function searchProduct(productList, search) {
+            return productList.filter(producto => producto.title.toLowerCase().includes(search.toLowerCase()))
+        }
+
+
+    </script>
+
+</body>
+
+</html>

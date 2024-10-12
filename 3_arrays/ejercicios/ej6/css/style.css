@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.productos {
+    border: 1px solid black;
+    box-shadow: 1px 1px 5px #444;
+    max-width: 1004px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    article {
+        width: calc(33.333% - 10px);
+        border: 1px solid gold;
+        padding: 10px;
+        background-color: beige;
+    }
+}

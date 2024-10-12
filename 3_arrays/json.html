@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON - Array asociativo - JavaScript Object Notation</title>
+</head>
+
+<body>
+
+    <script>
+
+        //array asociativo - json abandonamos el concepto de posicion, para tomar un concepto de clave -> valor
+
+        // dos formas de crear o declarar un json.
+
+        //objeto json vacio
+
+        const objecto = {}
+        const objetoPoo = new Object()
+
+        //forma estricta
+
+        const productoEstricto = {
+            "nombre": "pantalon",
+            "precio": 20,
+            "disponible": true
+        }
+
+        //forma común 
+
+        const producto = {
+            nombre: 'pantalon',
+            precio: 20,
+            disponible: true
+        }
+
+        console.log(productoEstricto)
+        console.log(producto)
+
+        //como leemos los elementos de un objeto json, tenemos dos nomenclaturas. La de punto y la corchete
+
+        //opcion 1: nomenclatura de corchete
+
+        console.log(producto['nombre']) //pantalon
+
+        //opcion 2: nomenclatura de punto
+
+        console.log(producto.precio) // 20
+        console.log(productoEstricto.nombre) // pantalon
+
+        let clave = 'nombre';
+        // ERROR console.log(producto.clave)
+        console.log(producto[clave]) // pantalon
+
+        //le puedo agregar más datos, más claves
+        producto.fechaCaducidad = '17/05/2025';
+        producto['codigo'] = 'AD234567'
+
+        console.log(producto)
+
+        // modificar propiedades ya existentes
+
+        producto.nombre = "Chaquete de lino"
+        producto['precio'] = 60;
+
+        console.log(producto)
+
+
+        //me gustaria al producto añadirle un descuento, primero quiero almacenar el porcentaje de descuento y luego aplicar en el precio.
+
+        producto.porcentajedescuento = 0.40
+        producto.descuento = producto.porcentajedescuento * producto.precio
+        producto.precio = producto.precio - producto.descuento;
+
+        console.log(producto)
+
+        // tenemos un problema, no son elemento iterables. Pero se han buscado un bucle propio para manejarlos. for in 
+
+        //recorren objecto json. SOLO SE PUEDE USAR PARA RECORRE JSON
+        for (let key in producto) {
+            console.log(key, producto[key])
+        }
+
+
+        // JSON tienen dos funcionalidad dentro Javascript que me permite acceder a un array simple de claves o array somple de valores.
+
+        const claves = Object.keys(producto)
+        console.log('claves:', claves)
+
+        const valores = Object.values(producto)
+        console.log('values', valores)
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

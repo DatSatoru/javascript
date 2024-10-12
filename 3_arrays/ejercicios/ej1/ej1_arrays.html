@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 arrays</title>
+</head>
+
+<body>
+    <script>
+
+        // Crear un array con 10 números, los que querais
+        // Pintar en una lista No ordenada aquellos números que sean divisibles por 3
+
+        const numeros = [2, 456, 232, 34, 21, 5, 3, 20, 9, 36, 56];
+
+        //poneros un listado de cosas que teneis que hacer en orden de la mas sencilla a las dificil. 
+        // 1 - Crear un array de numeros de diferentes ✅
+        // 2 - Pintar una lista de numeros ✅
+        // 3 - filtrar esa lista de numeros por solos los divibles por 3
+
+        function pintarNumeros(lista) {
+            let ul = '<ul>'
+            for (let i = 0; i < lista.length; i++) {
+                ul += `<li>${lista[i]}</li>`;
+            }
+            ul += '</ul>'
+            document.write(ul);
+        }
+
+        function filtrarDivisible(lista, divisor) {
+            const listaFiltrada = [];
+            for (i = 0; i < lista.length; i++) {
+                if (lista[i] % divisor === 0) {
+                    contador = listaFiltrada.length;
+                    listaFiltrada[contador] = lista[i];
+                }
+            }
+            return listaFiltrada;
+        }
+
+        // esto sin callbacks
+        /* const listaFinal = filtrarDivisible(numeros, 5)
+        pintarNumeros(listaFinal) */
+
+        pintarNumeros(filtrarDivisible(numeros, 4))
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

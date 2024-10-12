@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodo Pop | metodo pringel</title>
+</head>
+
+<body>
+
+    <script>
+
+        //Pop: Elimina elementos por el final del array y me devuelve el elemnto que elimina.
+
+        const animales = ['León', 'Gato', 'Tigre', 'Cuervo', ' Hipopotamo']
+
+        //el metodo pop al igual push se puede ejecutar solo y no recibe parametros.
+        animales.pop() // elimina hipopotamo
+        console.log(animales)
+
+        //devuelve el elemento borrado
+        let animalBorrado = animales.pop() // Cuervo
+        console.log(animalBorrado)
+        console.log(animales)
+
+
+        function borrarArray(longitud) {
+            for (let i = 0; i < longitud; i++) {
+                animales.pop()
+            }
+            console.log(animales)
+        }
+
+        borrarArray(animales.length)
+
+
+
+
+    </script>
+
+</body>
+
+</html>

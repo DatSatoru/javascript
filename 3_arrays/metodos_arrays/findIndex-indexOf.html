@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FindIndex o indexOf</title>
+</head>
+
+<body>
+
+    <script>
+
+        //el metodo findIndex() devuelve el indice del elemento a buscar (posicion), si cumple la funcion de condicion me devuelve su posicion y si no me devuelve -1. indexof es lo mismo pero para array simples.
+
+        const valores = [1, 2, 45, 65, 23, 5, 7, 84, 24, 100, 23];
+        const alumnos = [
+            { nombre: 'Juan Antonio', edad: 42 },
+            { nombre: 'Lucia', edad: 26 },
+            { nombre: 'Maria', edad: 12 },
+            { nombre: 'Rodrigo', edad: 27 },
+        ]
+
+
+        // busca dentro del array de valores un 3 y un 23
+        let posicion = valores.indexOf(23);
+        let posicion3 = valores.indexOf(23, posicion + 1)
+        console.log(posicion, posicion3);
+
+        //me podeis decir la posicion del alumno rodrigo
+        let posicion2 = alumnos.findIndex(alumno => alumno.nombre.toLowerCase() === 'rodrigo')
+        console.log(posicion2); // 3
+
+
+        // sabiendo que findIdex me busca un elemento dentro de un array y me devuelve su posicion y sabiendo tambien que splice(posicionInicial, cantidad) me borrar un elemento del array , implementar un funcion que permite borrar un alumno por su nombre del array de alumnos.
+
+        function deleteStudent(lista, nombre) {
+            let posicionAlumno = lista.findIndex(alumno => alumno.nombre.toLowerCase() === nombre.toLowerCase())
+            if (posicionAlumno !== -1) {
+                lista.splice(posicionAlumno, 1)
+                console.log('alumno borrado correctamente')
+                console.log(lista)
+            } else {
+                console.log('El alumno seleccionado no existe')
+            }
+        }
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

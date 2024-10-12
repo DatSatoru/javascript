@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unshift</title>
+</head>
+
+<body>
+
+    <script>
+
+        //UNSHIFT: introduce elementos por el principio del array, recalculando la posicion de los elementos del resto del array.
+
+        //devuelve  (return) la longitud del array resultante.
+
+        const animales = ['León', 'Gato', 'Perro', 'Periquito']
+
+        let nuevoAnimal = 'Tigre'
+        let nuevoAnimal2 = 'Pantera'
+
+        let longitud = animales.unshift(nuevoAnimal, nuevoAnimal2, 'Hipopotamo')
+
+        console.log(longitud)
+        console.log(animales)
+
+
+        // cambiar de posicion el gato a la posicion del perro y viceversa.
+        let temporal1 = animales[4];
+        let temporal2 = animales[5];
+
+        animales[5] = temporal1;
+        animales[4] = temporal2;
+
+        console.log(animales)
+
+
+        //darle la vuelta al array
+        const animalesInvertido = []
+        for (let i = 0; i < animales.length; i++) {
+            let animal = animales.pop()
+            animalesInvertido.push(animal)
+        }
+
+        console.log(animalesInvertido)
+
+
+
+    </script>
+
+</body>
+
+</html>

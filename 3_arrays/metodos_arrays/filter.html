@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+</head>
+
+<body>
+
+    <script>
+
+        //filter me busca varios elementos que cumplan la funcion de condicion. Filter no me devuelve un unico elemento me devuelve un array. OJO puede ser un array de un elemento.
+
+        const valores = [1, 2, 45, 65, 23, 5, 7, 84, 24, 100, 23];
+        const alumnos = [
+            { nombre: 'Juan Antonio', edad: 42 },
+            { nombre: 'Lucia', edad: 26 },
+            { nombre: 'Maria', edad: 12 },
+            { nombre: 'Rodrigo', edad: 27 },
+        ]
+
+        // quiero obtener todos los numeros que sean divisibles por 3.
+        function getDivisibles(lista, divisor) {
+            return valores.filter(numero => numero % divisor === 0)
+        }
+        divisiblesPor3 = getDivisibles(valores, 3);
+        divisiblesPor4 = getDivisibles(valores, 4);
+        divisiblesPor5 = getDivisibles(valores, 5);
+
+        console.log(divisiblesPor3)
+        console.log(divisiblesPor4)
+        console.log(divisiblesPor5)
+
+        // me podrias decir los alumnos menores de 30 años
+
+        function filterStudentByAge(studentList, age) {
+            return studentList.filter(student => student.edad < age)
+        }
+
+        let alumnosMenores20 = filterStudentByAge(alumnos, 20)
+        let alumnosMenores30 = filterStudentByAge(alumnos, 30)
+
+        console.log(alumnosMenores20)
+        console.log(alumnosMenores30)
+
+
+
+    </script>
+
+</body>
+
+</html>

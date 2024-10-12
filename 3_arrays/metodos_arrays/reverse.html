@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //Reverse o toReversed() = nuevo. Dar la vuelta al array. El primero modifica el array original y el segundo no.
+
+        const animales = ['León', 'Gato', 'Perro', 'Periquito']
+
+        //spread operator que era un rotura de referencia una copia virtual
+        const animalesInvertido = [...animales].reverse()
+        console.log(animalesInvertido)
+        console.log(animales)
+
+        const animalesInvertido2 = animales.toReversed()
+        console.log(animales)
+        console.log(animalesInvertido2)
+
+    </script>
+
+
+</body>
+
+</html>
