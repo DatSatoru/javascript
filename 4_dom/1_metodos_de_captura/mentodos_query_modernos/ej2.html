@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="estos">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <section>
+        <div>6</div>
+    </section>
+    <section>
+        <article>
+            <div>7</div>
+        </article>
+    </section>
+    <footer>
+        <aside>
+            <div>8</div>
+        </aside>
+    </footer>
+
+    <script>
+
+        //Seleccionar un div por su contenido y cambiarle el texto
+
+
+        const prueba = document.querySelector('footer aside div')
+
+        function selectorDom(contenido) {
+            const divs = document.querySelectorAll('div')
+            for (let div of divs) {
+                if (div.textContent === contenido) {
+                    return div;
+                }
+            }
+            return false
+
+        }
+
+
+        let div8 = selectorDom('7')
+        div8.textContent = 'Hola'
+
+
+    </script>
+</body>
+
+</html>

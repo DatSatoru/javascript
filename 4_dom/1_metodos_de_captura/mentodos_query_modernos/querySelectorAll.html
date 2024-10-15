@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuerySelectoAll</title>
+</head>
+
+<body>
+
+    <ul class="menu">
+        <li><a href="">text 1</a></li>
+        <li><a href="">text 2</a></li>
+        <li><a href="">text 3</a></li>
+        <li><a href="">text 4</a></li>
+    </ul>
+    <a href="">Hola</a>
+
+    <script>
+
+        //querySelectorAll(), igual que en querySelector, con reglas de CSS puedo seleccionar facil varios elementos, como los metodos getElementS, la diferencia es que get elements me devuelve un html collection, y querySelector me devuelve una NodeList. NodeList me permite usar algunos metodos de los arrays, como por ejemplo foreach
+
+        const enlacesMenu = document.querySelectorAll('.menu a')
+        console.log(enlacesMenu[0])
+        console.log(enlacesMenu.item[2])
+
+        enlacesMenu.forEach(enlace => enlace.textContent = ' Hola')
+    </script>
+</body>
+
+</html>

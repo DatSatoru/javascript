@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+        </ul>
+    </div>
+
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+
+    <ul class="menu">
+        <li><a href="">text 1</a></li>
+        <li><a href="">text 2</a></li>
+        <li><a href="">text 3</a></li>
+    </ul>
+
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+
+    <script>
+        //querySelector() es una funcion que me permite capturar elementos del DOM en una const en javaScript. Me permite capturarlo elementos que coge el primer elemento que cumpla la regla de CSS
+
+        const miA = document.querySelector('.menu li:first-child a')
+        miA.textContent = 'Hola'
+
+        const ultimoLi = document.querySelector('div:first-child ul li:last-child');
+        ultimoLi.textContent = 'Cambiando el ultimo Li del first Div'
+    </script>
+</body>
+
+</html>

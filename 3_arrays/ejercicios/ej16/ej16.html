@@ -18,15 +18,15 @@
         //Paso 2: Filtrar animales peso
         //Paso 3: Pintar un Animal
 
-        const filterMuyPeligrosos = function (animalList, color = 'red') {
+        const filterMuyPeligrosos = function (animalList) {
             return animalList.filter(animal => animal.peligrosidad === 5)
         }
 
-        const filterPeligrosos = function (animalList, color = 'yellow') {
+        const filterPeligrosos = function (animalList) {
             return animalList.filter(animal => animal.peligrosidad <= 4 && animal.peligrosidad > 1)
         }
 
-        const filterNoPeligrosos = function (animalList, color = 'green') {
+        const filterNoPeligrosos = function (animalList) {
             return animalList.filter(animal => animal.peligrosidad === 1)
         }
 

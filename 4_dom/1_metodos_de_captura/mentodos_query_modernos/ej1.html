@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="estos">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <section>
+        <div>6</div>
+    </section>
+    <section>
+        <article>
+            <div>7</div>
+        </article>
+    </section>
+    <footer>
+        <aside>
+            <div>8</div>
+        </aside>
+    </footer>
+
+    <script>
+
+        //Crear un script que me permita elegir un div por su numero, dando igual donde se encuentre, y cambiarle el texto por la frase que querais
+
+
+        const prueba = document.querySelector('footer aside div')
+        const allDivs = document.querySelectorAll('div')
+
+        function selectorDom(listaDoms, numero) {
+            return listaDoms.filter(div => div.textContent === numero)
+
+        }
+
+
+        function cambiarTexto(divSelector, frase) {
+            return divSelector.textContent = `${frase}`
+        }
+
+        cambiarTexto(selectorDom(allDivs, 5), 'Hola')
+    </script>
+</body>
+
+</html>

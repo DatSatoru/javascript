@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Elements by Class Name</title>
+</head>
+
+<body>
+    <p class="impar">item 1</p>
+    <p class="par">item 2</p>
+    <p class="impar">item 3</p>
+    <p class="par">item 4</p>
+    <p class="impar">item 5</p>
+    <p class="par">item 6</p>
+    <p class="impar">item 7</p>
+    <p class="par">item 8</p>
+    <p class="impar">item 9</p>
+    <p class="par">item 10</p>
+
+    <script>
+        //Quiero capturar todos los ementos que sean impar y modificarlo con el texto que yo quiera
+
+        const parrafosImpares = document.getElementsByClassName('impar')
+        const parrafosPares = document.getElementsByClassName('par')
+
+        const cambiarTexto = function (listaParrafos, texto) {
+            for (let parrafo of listaParrafos) {
+                parrafo.textContent = texto
+            }
+        }
+
+        cambiarTexto(parrafosImpares, 'somos parrafos incomprendidos')
+        cambiarTexto(parrafosPares, 'somos parrafos pares')
+    </script>
+</body>
+
+</html>

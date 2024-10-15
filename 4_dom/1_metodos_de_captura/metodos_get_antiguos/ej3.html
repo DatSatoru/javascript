@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <p>mi header</p>
+    </header>
+
+    <main>
+        <section id="poligonos"></section>
+        <section id="hero"></section>
+    </main>
+
+    <footer>
+        <p>mi footer</p>
+    </footer>
+
+    <script>
+
+        //pintar estos poligonos en la secction de poligonos
+        const poligonos =
+            [
+                {
+                    "width": "100px",
+                    "height": "150px",
+                    "backgroundColor": "#ff0000",
+                    "border": "2px solid #000000"
+                },
+                {
+                    "width": "200px",
+                    "height": "100px",
+                    "backgroundColor": "#00ff00",
+                    "border": "3px dashed #333333"
+                },
+                {
+                    "width": "150px",
+                    "height": "150px",
+                    "backgroundColor": "#0000ff",
+                    "border": "1px dotted #666666"
+                },
+                {
+                    "width": "120px",
+                    "height": "180px",
+                    "backgroundColor": "#ffcc00",
+                    "border": "4px double #999999"
+                },
+                {
+                    "width": "180px",
+                    "height": "140px",
+                    "backgroundColor": "#ff00ff",
+                    "border": "5px groove #444444"
+                }
+            ]
+
+        const sectionPoli = document.getElementById('poligonos')
+
+        const pintarUnCubo = function (listaCubos, elemDom) {
+            elemDom.innerHTML += `<div style ="width: ${listaCubos.width}; height: ${listaCubos.height}; background-color:${listaCubos.backgroundColor}; border:${listaCubos.border}"></div>`
+        }
+
+        const pintarTodosCubos = function (listaCubos, elemDom) {
+            listaCubos.forEach(cubo => pintarUnCubo(listaCubos, elemDom))
+
+        }
+
+        pintarTodosCubos(poligonos, sectionPoli)
+    </script>
+</body>
+<div style=""></div>
+
+</html>

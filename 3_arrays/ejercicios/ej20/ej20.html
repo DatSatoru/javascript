@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 20</title>
+    <script src="./js/data.js"></script>
+</head>
+
+<body>
+    <script>
+        // 1. Obtener un array con los nombres de los estudiantes que tienen al menos una nota superior a 90.
+        // 2. Calcular el promedio de las notas de cada estudiante y devolver un array con los nombres y su promedio.
+
+        /*   const estudiantes = [
+              { id: 1, nombre: "Ana", notas: [85, 92, 78] },
+              { id: 2, nombre: "Carlos", notas: [89, 94, 90] },
+              { id: 3, nombre: "Elena", notas: [72, 85, 88] },
+              { id: 4, nombre: "Mario", notas: [90, 87, 94] },
+              { id: 5, nombre: "Laura", notas: [65, 72, 70] },
+              { id: 6, nombre: "Pedro", notas: [95, 100, 98] }
+          ];
+   */
+
+        const filterNotes = function (listaNotas, cualification) {
+            let resultado = listaNotas.filter(student => student.notas.some(nota => nota >= cualification))
+            return resultado.map(student => student.nombre)
+        }
+
+        console.log(filterNotes(estudiantes, 90))
+
+        // Calcular promedio
+
+        const calcularMedia = function (notas) {
+            let suma = notas.reduce((acc, nota) => acc + nota)
+            return suma / notas.length;
+        }
+
+
+        const calcularPromedio = function (listaNotas) {
+            let resultado = listaNotas.map(student => {
+                return { 'nombre': student.nombre, 'Nota Media': calcularMedia(student.notas) }
+            })
+            return resultado
+        }
+
+        console.log(calcularPromedio(estudiantes))
+    </script>
+</body>
+
+</html>

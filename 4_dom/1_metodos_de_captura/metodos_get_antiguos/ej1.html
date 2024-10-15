@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h2>Cabecera</h2>
+        <ul></ul>
+    </header>
+
+    <footer>
+        <h2>Pie</h2>
+        <ul></ul>
+    </footer>
+
+    <script>
+        const seccionesWeb = ['Index', 'Contacto', 'Galeria', 'Servicios']
+        const seccionLegal = ['Privacidad', 'Cookies']
+
+        //Quiero que pongais las seccionesWeb en el ul de la cabecera y las seccionesLegal en el ul del footer. OJO enlace y href
+
+        /* const getHeader = document.getElementsByTagName('header')[0];
+        console.log(getHeader) */
+
+        const getUlfromHeader = document.getElementsByTagName('ul')[0];
+        const getUlformFooter = document.getElementsByTagName('ul')[1];
+
+        const pintarLista = function (list, ulDom) {
+            for (let content of list) {
+                ulDom.innerHTML += `<li><a href="${content.toLowerCase()}">${content}</a></li>`
+            }
+        }
+
+        pintarLista(seccionLegal, getUlformFooter)
+        pintarLista(seccionesWeb, getUlfromHeader)
+    </script>
+    <a href=""></a>
+</body>
+
+</html>

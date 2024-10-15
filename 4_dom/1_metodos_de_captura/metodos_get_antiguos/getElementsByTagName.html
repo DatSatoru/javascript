@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Elements by Tag name</title>
+</head>
+
+<body>
+
+    <p class="color"><strong>Juan</strong></p>
+    <p>Pepe</p>
+    <p>Carlos</p>
+
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur distinctio earum fugit animi
+            praesentium inventore quae iusto esse aperiam itaque.</p>
+    </div>
+
+    <section>
+        <article>
+            <p>Estoy dentro del article</p>
+        </article>
+    </section>
+
+    <script>
+        //getElementsByTagName(), es una funcion que me permite capturar todos los elementos del html que tengan determinada etiqueta, pasando esa etiqueta como parametro en la funcion
+
+        const parrafos = document.getElementsByTagName('p')
+        console.log(parrafos)
+
+        console.log(parrafos[1].textContent)
+        parrafos[2].textContent = ' Nuria'
+
+
+
+        //Quiero cambiar el texto de todos los p por ID_Bootcamps
+
+        for (let parrafo of parrafos) {
+            parrafo.textContent = 'Id bootcamps'
+        }
+
+        // capturar seccion y luego campturo ese parrafo
+
+        const secciones = document.getElementsByTagName('section');
+        const miSeccion = secciones[0];
+
+        const miP = miSeccion.getElementsByTagName('p')[0];
+        miP.textContent = ' He cambiado solo el texto de la seccion'
+    </script>
+</body>
+
+</html>

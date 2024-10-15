@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="datos">
+        <li>Nombre: </li>
+        <li>Apellidos: </li>
+    </ul>
+
+    <script>
+        //quiero que en el ul de datos pongais vuestro nombre y apellidos sin quitar la palabra nombre y apellidos
+
+        /* const nombre = 'Alvaro'
+        const apellidos = 'Martinez'
+
+        const nombreLi = document.getElementsByTagName('li')[0]
+        const apellidosLi = document.getElementsByTagName('li')[1]
+
+        const insertarDatos = function (liDom, dato) {
+            liDom.textContent += dato
+        }
+
+        insertarDatos(nombreLi, nombre)
+        insertarDatos(apellidosLi, apellidos) */
+
+        const uldatos = document.getElementById('datos')
+        const lis = uldatos.getElementsByTagName('li');
+
+        function cambiarTexto(nombre, apellidos, lis) {
+            lis[0].textContent += " " + nombre
+            lis[1].textContent += " " + apellidos
+        }
+
+        cambiarTexto('Alvaro', 'Martinez', lis)
+    </script>
+</body>
+
+</html>
