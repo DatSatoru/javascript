@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <section>
+
+        <article>
+            <h3>Portatil MacBook Pro</h3>
+            <p>Precio <span>200€</span></p>
+            <button onclick="addCarrito(this.parentNode)">Añadir al carrito</button>
+        </article>
+        <article>
+            <h3>Raton Gaming</h3>
+            <p>Precio <span>20€</span></p>
+            <button onclick="addCarrito(this.parentNode)">Añadir al carrito</button>
+        </article>
+
+        <a href="carrito.html">Ver Carrito</a>
+    </section>
+    <script>
+
+        const arrayCarrito = []
+
+
+        function addCarrito(obj) {
+            const article = obj
+            const h3 = article.querySelector('h3')
+            let producto = h3.textContent
+            const span = article.querySelector('span')
+            let precio = span.textContent
+
+            //guardando este producto en el localstorage puede recogerlo, leer y usarlo dentro de otras paginas web
+
+            //getItem - leer cosas en el localstorage
+            // setItem - guardar cosas del localstorage
+            // removeItem - borrar un elemento  determinado
+            // clear - vaciar el localstora
+
+
+            /*  localStorage.setItem('title', producto)
+             localStorage.setItem('price', precio) */
+
+
+            let product = {
+                title: producto,
+                price: precio
+            }
+
+            arrayCarrito.push(product)
+
+            localStorage.setItem('carrito', JSON.stringify(arrayCarrito))
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="carrito">
+
+    </ul>
+    <button id="btn">Vaciar Carrito</button>
+    <script>
+        //identificamos el carrito y pintamos los productos en el carrito
+
+        const ulCarrito = document.querySelector('#carrito')
+        //recoger del localstorage y pintarlo dentro de un li
+
+        /*   let precio = localStorage.getItem('price')
+          let titulo = localStorage.getItem('title') */
+
+        /*  if (titulo !== null && precio !== null) {
+             ulCarrito.innerHTML = `<li>${titulo}: ${precio}`
+ 
+         } */
+
+        const data = localStorage.getItem('carrito')
+        const arrayDatos = JSON.parse(data)
+
+        function printOneProduct(producto, dom) {
+            dom.innerHTML += `<li>${producto.title}: ${producto.price}`
+        }
+
+
+        function printAllCarrito(list, dom) {
+
+            if (list) {
+
+                list.forEach(producto => printOneProduct(producto, dom))
+            } else {
+                dom.innerHTML = '<h2> No hay productos en el carrito </h2>'
+            }
+        }
+
+        printAllCarrito(arrayDatos, ulCarrito)
+
+        const btn = document.querySelector('#btn')
+        btn.addEventListener('click', (event) => {
+            //borrar el localstorage valor del carrito
+
+            localStorage.removeItem('carrito')
+            if (arrayDatos) {
+                arrayDatos.splice(0, arrayDatos.length - 1)
+
+            }
+
+
+
+
+            //volver al index despues de haber hecho otra funcionalidad
+            window.location.href = 'index.html'
+
+        })
+
+
+    </script>
+</body>
+
+</html>
