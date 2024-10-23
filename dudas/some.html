@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Some - la existencia o no de un elemento en una lista</title>
+</head>
+
+<body>
+
+    <div>
+        <form id="form">
+            <input type="text" name="edad" placeholder="introduce una edad">
+            <input type="submit" value="buscar">
+        </form>
+        <section>
+            <p>Contador: <span></span></p>
+        </section>
+
+    </div>
+
+
+    <script>
+        const personas = [
+            { nombre: "Ana", edad: 25 },
+            { nombre: "Luis", edad: 30 },
+            { nombre: "María", edad: 25 },
+            { nombre: "Carlos", edad: 30 },
+            { nombre: "Lucía", edad: 22 }
+        ];
+
+        const form = document.querySelector('#form');
+        const span = document.querySelector('section p span');
+
+        form.addEventListener('submit', getDataForm);
+
+        function getDataForm(event) {
+            event.preventDefault();
+            let edad = Number(event.target.edad.value);
+            //quiero saber si existe algun persona que tenga esa edad.
+            // some solo sirve para comprobar si existe o no un elemento, por ejemplo para saber si esta duplicado
+            /* const estado = personas.some(persona => persona.edad === edad)
+            if (estado) {
+                alert('existe')
+            } else {
+                alert('no existe')
+            } */
+            const result = personas.filter(persona => persona.edad === edad);
+            if (result.length > 0) {
+                alert('existe')
+            } else {
+                alert('no existe')
+            }
+            span.textContent = result.length;
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

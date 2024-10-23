@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Test de conocimientos</h1>
+
+    <p>¿Que es javascript?</p>
+    <div>
+        <form action="" id="examen">
+            <input type="checkbox" name="option" id="respuesta1" value="1"><span>Un lenguaje de programación</span>
+            <input type="checkbox" name="option" id="respuesta2" value="2"><span>Un lenguaje multiparadigma</span>
+            <input type="checkbox" name="option" id="respuesta3" value="3"><span>Me permite programa paginas
+                web</span>
+            <input id="btn" type="submit" value="responder">
+        </form>
+    </div>
+
+    <script>
+
+        const formExam = document.querySelector('#examen');
+
+        function capturaRespuesta(event) {
+            event.preventDefault();
+            //obtengo solo los check que esta clickados
+            const inputsChecked = document.querySelectorAll('input[name="option"]:checked');
+            const btn = document.querySelector('#btn');
+            const respuestas = [];
+            inputsChecked.forEach(input => respuestas.push(Number(input.value)))
+            console.log(respuestas)
+
+            btn.disabled = true;
+        }
+
+
+        formExam.addEventListener('submit', capturaRespuesta);
+    </script>
+</body>
+
+</html>

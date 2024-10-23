@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones expresiva y funciones declarativas</title>
+</head>
+
+<body>
+
+
+    <script>
+
+
+
+        //Diferencias
+        // la funcion expresiva se puede reducir la declarativa no.
+        // la expresiva evita el hoisting
+
+        //funcion declarativa
+
+        function sumarDeclarativa(n1, n2) {
+            return n1 + n2
+        }
+
+        //funcion expresiva
+        const sumarExpresiva = (n1, n2) => n1 + n2
+
+
+        console.log(sumarDeclarativa(1, 2))
+        console.log(sumarExpresiva(1, 2))
+
+    </script>
+
+</body>
+
+</html>

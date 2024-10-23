@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header>
+        <select id="idioma">
+            <option value="">Selecciona un idioma</option>
+            <option value="es">Español</option>
+            <option value="en">English</option>
+            <option value="it">Italiano</option>
+        </select>
+    </header>
+    <main>
+        <section id="es">
+            <h2>Titulo de la seccion en español</h2>
+            <p>Este texto esta en español</p>
+        </section>
+
+        <section id="en">
+            <h2>Title section in English</h2>
+            <p>This is a text in english</p>
+        </section>
+
+        <section id="it">
+            <h2>Titolo della sezione in italiano</h2>
+            <p>questo è un testo in italianoº</p>
+        </section>
+    </main>
+
+    <script>
+
+        const selectorIdioma = document.querySelector('#idioma');
+        selectorIdioma.addEventListener('change', cambiarIdioma);
+
+        function cambiarIdioma(event) {
+            hiddenAll()
+            const sectionCarga = document.querySelector(`#${event.target.value}`)
+            sectionCarga.style.display = 'block'
+        }
+
+        function hiddenAll() {
+            const secciones = document.querySelectorAll('section');
+            secciones.forEach(seccion => seccion.style.display = 'none')
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

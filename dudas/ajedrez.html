@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio de ajedrez</title>
+    <style>
+        .fila {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="tablero">
+    </section>
+
+
+    <script>
+        const tablero = document.querySelector('.tablero');
+
+        function pintarUnaCelda(color, ancho, dom) {
+            const div = document.createElement('div'); //<div></div>
+            div.setAttribute('style', `background-color: ${color}; width: ${ancho}px; height: ${ancho}px`);
+            dom.appendChild(div)
+        }
+
+
+        function pintarFila(numero, ancho, color1, color2, dom) {
+            const div = document.createElement('div');
+            div.classList.add('fila') // <div class="fila"></div>
+            for (let i = 1; i <= numero; i++) {
+                let color = (i % 2 !== 0) ? color1 : color2;
+                pintarUnaCelda(color, ancho, div);
+            }
+            dom.appendChild(div)
+        }
+
+        function pintarUnTablero(numero, ancho, dom) {
+            for (let i = 1; i <= numero; i++) {
+                let color1 = (i % 2 !== 0) ? 'black' : 'grey';
+                let color2 = (i % 2 !== 0) ? 'grey' : 'black';
+                pintarFila(numero, ancho, color1, color2, dom)
+            }
+        }
+
+
+        pintarUnTablero(3, 100, tablero)
+
+
+
+    </script>
+
+</body>
+
+</html>

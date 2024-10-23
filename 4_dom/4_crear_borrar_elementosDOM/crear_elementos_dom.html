@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul class="listado">
+
+    </ul>
+
+    <script>
+        const youtubers = [
+            {
+                nombre: "El Rubius",
+                url: "https://www.youtube.com/user/elrubiusOMG"
+            },
+            {
+                nombre: "Vegetta777",
+                url: "https://www.youtube.com/user/vegetta777"
+            },
+            {
+                nombre: "Willyrex",
+                url: "https://www.youtube.com/user/Willyrex"
+            },
+            {
+                nombre: "AuronPlay",
+                url: "https://www.youtube.com/user/AuronPlay"
+            },
+            {
+                nombre: "TheGrefg",
+                url: "https://www.youtube.com/user/TheGrefg"
+            },
+            {
+                nombre: "Ibai",
+                url: "https://www.youtube.com/c/Ibai"
+            },
+            {
+                nombre: "Paula Gonu",
+                url: "https://www.youtube.com/c/PaulaGonu"
+            },
+            {
+                nombre: "Patry Jordan",
+                url: "https://www.youtube.com/user/gymvirtual"
+            },
+            {
+                nombre: "Luzu",
+                url: "https://www.youtube.com/user/LuzuVlogs"
+            },
+            {
+                nombre: "DalasReview",
+                url: "https://www.youtube.com/user/DalasReview"
+            }
+        ]
+
+        const uldom = document.querySelector('.listado');
+
+        function pintarUnYoutuber(personaje, itemDom) {
+            // itemDom.innerHTML += `<li>${personaje}</li>`
+            //Paso 1: crear las etiquetas li, a
+            const li = document.createElement('li'); //<li></li>
+            const a = document.createElement('a');
+
+            // Paso 2: relleno de contenido o modifico sus atributos
+            a.textContent = personaje.nombre // <a>Ibai</a>
+            a.href = personaje.url //<a href="http....">Ibai</a>
+            a.target = '_blanck'
+
+            //Paso 3: introducir los elementos hijos dentro de sus padres
+            li.appendChild(a) //<li><a href="http....">Ibai</a></li>
+            itemDom.appendChild(li) //<ul><li><a href="http....">Ibai</a></li></ul>
+
+        }
+
+        function printYoutubers(list, dom) {
+            list.forEach(youtuber => pintarUnYoutuber(youtuber, dom))
+        }
+
+        printYoutubers(youtubers, uldom)
+
+    </script>
+</body>
+
+</html>

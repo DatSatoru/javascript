@@ -1,0 +1,22 @@
+const pacientes = [
+    { id: 1, nombre: "Ana", apellidos: "Pérez García", edad: 25, diagnostico: "Hipertensión", numeross: "AB12345" },
+    { id: 2, nombre: "Luis", apellidos: "Fernández López", edad: 30, diagnostico: "Asma", numeross: "CD23456" },
+    { id: 3, nombre: "María", apellidos: "Rodríguez Sánchez", edad: 36, diagnostico: "Diabetes tipo 2", numeross: "EF34567" },
+    { id: 4, nombre: "Carlos", apellidos: "González Pérez", edad: 28, diagnostico: "Alergia", numeross: "GH45678" },
+    { id: 5, nombre: "Lucía", apellidos: "Martínez Ruiz", edad: 23, diagnostico: "Asma", numeross: "IJ56789" },
+    { id: 6, nombre: "Juan", apellidos: "Gómez Ramírez", edad: 35, diagnostico: "Diabetes tipo 2", numeross: "KL67890" },
+    { id: 7, nombre: "Pedro", apellidos: "Díaz Hernández", edad: 32, diagnostico: "Hipertensión", numeross: "MN78901" },
+    { id: 8, nombre: "Laura", apellidos: "Moreno Castro", edad: 27, diagnostico: "Traumatismo", numeross: "OP89012" },
+    { id: 9, nombre: "Alberto", apellidos: "Vázquez Romero", edad: 34, diagnostico: "Asma", numeross: "QR90123" },
+    { id: 10, nombre: "Sofía", apellidos: "Serrano Flores", edad: 21, diagnostico: "Diabetes tipo 2", numeross: "ST01234" },
+    { id: 11, nombre: "Daniel", apellidos: "Hernández Gil", edad: 26, diagnostico: "Alergia", numeross: "UV12345" },
+    { id: 12, nombre: "Paula", apellidos: "Jiménez Ortiz", edad: 29, diagnostico: "Hipertensión", numeross: "WX23456" },
+    { id: 13, nombre: "Miguel", apellidos: "López Vargas", edad: 24, diagnostico: "Asma", numeross: "YZ34567" },
+    { id: 14, nombre: "Raquel", apellidos: "Navarro Ramos", edad: 31, diagnostico: "Diabetes tipo 2", numeross: "AB45678" },
+    { id: 15, nombre: "Fernando", apellidos: "Ruiz Muñoz", edad: 22, diagnostico: "Obesidad", numeross: "CD56789" },
+    { id: 16, nombre: "Clara", apellidos: "Molina Vargas", edad: 36, diagnostico: "Hipertensión", numeross: "EF67890" },
+    { id: 17, nombre: "Javier", apellidos: "Torres Lara", edad: 20, diagnostico: "Diabetes tipo 2", numeross: "GH78901" },
+    { id: 18, nombre: "Cristina", apellidos: "Ramírez Cano", edad: 33, diagnostico: "Alergia", numeross: "IJ89012" },
+    { id: 19, nombre: "Álvaro", apellidos: "Romero Fernández", edad: 18, diagnostico: "Asma", numeross: "KL90123" },
+    { id: 20, nombre: "Eva", apellidos: "Domínguez Prieto", edad: 28, diagnostico: "Hipertensión", numeross: "MN01234" }
+];

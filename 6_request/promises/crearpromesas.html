@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Promesas</title>
+</head>
+
+<body>
+    <script>
+
+
+        //creacion de una promesa. Es un bloque de codigo que se delega, para permitir realizar otras acciones, para poder continuar con otras cosas
+
+        //una promesa tiene dos partes, como una funcion
+
+        //declaracion de la promesa
+        const miPromesa = new Promise((resolve, reject) => {
+            // logica del proceso que quiero delegar
+            //resolve() es el metodo que me devuelve un resultado esperado
+            //reject() es una funcion que resuelve los posibles errores
+
+
+
+        })
+
+
+
+        //consumicion de la promesa. then ejecuta un callback que representa la delcaracion de resolve y cath ejecuta un callback que representa la ejecucion del script
+        miPromesa
+            .then((msg) => {
+                //ya tenemos el dato, podemos cargarlo, borrarlo, etc
+                console.log(msg)
+            })
+            .catch((error) => {
+                //hemos recibido un error
+                console.log(error)
+            })
+
+
+    </script>
+</body>
+
+</html>

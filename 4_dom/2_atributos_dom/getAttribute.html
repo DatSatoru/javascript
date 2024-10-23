@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getAttribute</title>
+</head>
+
+<body>
+    <a href="http://google.com">Enlace</a>
+    <div class="hola">hola</div>
+    <p id="pepe" style="background-color: red; border: 2px solid black">pepe</p>
+
+
+    <script>
+        const a = document.querySelector('a');
+        const div = document.querySelector('.hola');
+        const p = document.querySelector('#pepe');
+
+        //console.log(a.href)
+        let url = a.getAttribute('href');
+        console.log(url);
+
+        console.log(div.getAttribute('class'))
+
+        console.log(p.getAttribute('style').split('; '))
+        console.log(p.getAttribute('id'))
+
+    </script>
+
+</body>
+
+</html>

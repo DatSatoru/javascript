@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos de formularios</title>
+</head>
+
+<body>
+
+    <form action="send.html" method="GET" id="form">
+        <div>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="introduce tu nombre">
+        </div>
+        <div>
+            <label for="hobbie">Afición</label>
+            <input type="text" id="hobbie" name="hobbie" placeholder="introduce tu afición">
+        </div>
+        <input type="submit" value="Guardar">
+    </form>
+
+    <ul class="listadoAficiones">
+    </ul>
+
+
+    <script>
+
+        //capturamos los elementos con los que vamos a interactuar.
+
+        const formulario = document.querySelector('#form');
+        const ulAficiones = document.querySelector('.listadoAficiones');
+        const arrayAficiones = [];
+
+
+        function saveData(array, nombre, hobbie) {
+            const user = {
+                nombre: nombre,
+                aficion: hobbie
+            }
+            //Comprobar si el usuario esta duplicado
+            const isDuplicate = array.some(usuario => usuario.nombre === nombre && usuario.aficion === hobbie);
+            if (!isDuplicate) {
+                array.push(user)
+                return user;
+            }
+            return false
+        }
+
+
+        function printOneAficion(user, dom) {
+            const li = document.createElement('li');
+            li.textContent = `${user.nombre} - ${user.aficion}`
+            dom.appendChild(li);
+        }
+
+
+        function getDataForm(event) {
+            //en formulario y enlace que tiene una accion previa de cambio de pantalla hay que prevenir dicha accion para poder quedarnos en esta pantalla y manejar
+            event.preventDefault()
+            if (event.target.nombre.value !== "" && event.target.hobbie.value !== "") {
+                let usuario = saveData(arrayAficiones, event.target.nombre.value, event.target.hobbie.value)
+                if (usuario) {
+                    printOneAficion(usuario, ulAficiones)
+                } else {
+                    alert('usuario duplicado')
+                }
+                event.target.reset()
+            } else {
+                alert('Todos los campos son obligatorios')
+            }
+
+        }
+
+        formulario.addEventListener('submit', getDataForm)
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

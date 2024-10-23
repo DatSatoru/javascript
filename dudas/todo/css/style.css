@@ -1,0 +1,93 @@
+@import url(reset.css);
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.todo {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+
+    aside {
+        background-color: whitesmoke;
+        border-bottom: 3px solid brown;
+        padding: 20px;
+
+        input {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        select {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        .btn {
+            background-color: black;
+            color: white;
+            border: 0;
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgb(145, 116, 116);
+                color: black;
+            }
+        }
+    }
+
+    section {
+        padding: 10px;
+
+        article {
+            padding: 10px;
+            border: 2px solid black;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+
+            button {
+                background-color: red;
+                border: 0;
+                color: white;
+                padding: 10px;
+            }
+        }
+
+        .urgente {
+            background-color: darkred;
+            color: white;
+        }
+
+        .nourgente {
+            background-color: darkcyan;
+            color: white;
+        }
+    }
+}
+
+@media(min-width: 600px) {
+    .todo {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        aside {
+            width: 40%;
+            height: calc(100vh - 20px);
+        }
+
+        section {
+            width: 60%;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+figure {
+    max-width: 500px;
+    margin: 40px auto;
+    border: 3px solid black;
+    padding: 20px;
+
+    figcaption {
+        margin-top: 10px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+}

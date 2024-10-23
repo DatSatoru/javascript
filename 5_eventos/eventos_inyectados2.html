@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .coche {
+            width: 150px;
+            transform: rotate(180deg);
+            transition: margin 0.3s;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="mover(this)">IZQUIERDA</button>
+    <button onclick="mover(this)">DERECHA</button>
+    <button onclick="mover(this)">ARRIBA</button>
+    <button onclick="mover(this)">ABAJO</button>
+    <figure class="coche">
+        <img src="https://www.deividart.com/libres/zycars-coche_camaro-2.png" alt="camaro">
+    </figure>
+
+    <script>
+        const coche = document.querySelector('.coche')
+        let avanceX = 0;
+        let avanceY = 0;
+
+        function mover(button) {
+            const direccion = { 'DERECHA': 40, 'IZQUIERDA': -40, 'ARRIBA': -40, 'ABAJO': 40 }
+            let velocidad = direccion[button.textContent];
+            if (button.textContent === 'DERECHA' || button.textContent === 'IZQUIERDA') {
+                moverCocheX(velocidad, coche)
+            } else if (button.textContent === 'ARRIBA' || button.textContent === 'ABAJO') {
+                moverCocheY(velocidad, coche)
+            }
+        }
+
+        function moverCocheX(vel, obj) {
+            avanceX += vel;
+            obj.style.marginLeft = avanceX + 'px';
+            let deg = vel >= 0 ? '180deg' : '0deg';
+            obj.style.transform = `rotate(${deg})`
+        }
+
+        function moverCocheY(vel, obj) {
+            avanceY += vel;
+            obj.style.marginTop = avanceY + 'px';
+            let deg = vel >= 0 ? '270deg' : '90deg';
+            obj.style.transform = `rotate(${deg})`
+        }
+
+
+        //me gustaria que el coche cuando le deis a izquierda cambie el morro de direccion
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Athiti:wght@200;400;500;600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: rgb(64, 158, 205);
+    --color-secondary: black;
+    --font-primary: 'Athiti', sans-serif;
+    --grid: 1rem;
+    --font-size: 1rem;
+}
+
+body {
+    font-family: var(--font-primary);
+    font-size: var(--font-size);
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    max-width: 1004px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: rgb(198, 219, 250);
+    border-bottom: 5px solid var(--color-primary);
+    box-shadow: 1px 1px 10px #444;
+    padding: 20px;
+
+    select {
+        padding: 10px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    form {
+        display: flex;
+
+        div {
+            margin-bottom: 10px;
+        }
+
+        input {
+            padding: 10px;
+            margin-right: 10px;
+        }
+
+    }
+}
+
+main {
+    section {
+        padding: 20px;
+
+        h2 {
+            font-size: 200%;
+        }
+
+        #contador {
+            background-color: var(--color-secondary);
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            align-content: center;
+            color: white;
+            font-size: 150%;
+        }
+
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--grid);
+            padding: 10px 0px;
+
+            article {
+                width: calc(25% - var(--grid));
+                background-color: whitesmoke;
+                border: 3px solid var(--color-primary);
+                padding: 20px;
+                position: relative;
+
+                ul {
+                    margin-bottom: 15px;
+                }
+
+                .diagnostico {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    background-color: var(--color-primary);
+                    width: 100%;
+                    color: white;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 600px) {
+    form {
+        flex-direction: column;
+        padding-right: 20px;
+
+        input {
+            width: 100%;
+        }
+
+        .btn {
+            width: 30%;
+        }
+    }
+
+    main section .flex article {
+        width: calc(100% - var(--grid));
+    }
+}

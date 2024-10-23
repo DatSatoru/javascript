@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Listener</title>
+    <style>
+        .caja {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+
+        ul li {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul>
+        <li data-color="red" data-posicion="200px">Rojo</li>
+        <li data-color="blue" data-posicion="50px">Azul</li>
+        <li data-color="green" data-posicion="350px">Verde</li>
+    </ul>
+
+    <div class="caja"></div>
+
+    <script>
+
+        const caja = document.querySelector('.caja');
+        const lis = document.querySelectorAll('ul li');
+
+        for (let li of lis) {
+            li.addEventListener('click', cambiarColor);
+        }
+
+        function cambiarColor(event) {
+            //console.log(event.target)
+            caja.style.backgroundColor = event.target.dataset.color;
+            caja.style.marginLeft = event.target.dataset.posicion;
+            caja.style.transition = '1s';
+        }
+
+
+
+
+
+    </script>
+
+</body>

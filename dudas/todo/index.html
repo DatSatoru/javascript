@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/funcionesData.js"></script>
+</head>
+
+<body>
+
+    <div class="todo">
+        <aside>
+            <form id="formTodo">
+                <div>
+                    <input type="text" placeholder="introduce el titulo" name="title">
+                </div>
+                <div>
+                    <select name="priority">
+                        <option value="">Selecciona una prioridad</option>
+                        <option value="urgente">Urgente</option>
+                        <option value="nourgente">No Urgente</option>
+                    </select>
+                </div>
+                <div>
+                    <input type="submit" value="Guardar" class="btn">
+                </div>
+            </form>
+        </aside>
+        <section class="flex">
+            <!--  <article class="urgente">
+                <h3>Titulo de la tarea</h3><button><i class="fa-solid fa-trash"></i></button>
+            </article>
+            <article class="nourgente">
+                <h3>Titulo de la tarea</h3><button><i class="fa-solid fa-trash"></i></button>
+            </article> -->
+        </section>
+    </div>
+
+    <script src="./js/todo.js"></script>
+</body>
+
+</html>

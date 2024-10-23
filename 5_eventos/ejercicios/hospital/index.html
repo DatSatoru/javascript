@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/data.js"></script>
+    <script src="./js/funcionesdata.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <select name="" id="diagnosis">
+                <option value="">Selecciona un diagnostico</option>
+            </select>
+        </div>
+
+        <div>
+            <form id="formAge">
+                <div>
+                    <label for="agemin">Edad minima</label>
+                    <input type="number" id="agemin" name="agemin" placeholder="introduce una edad">
+                </div>
+                <div>
+                    <label for="agemax">Edad maxima</label>
+                    <input type="number" id="agemax" name="agemax" placeholder="introduce una edad">
+                </div>
+                <div>
+                    <input class="btn" type="submit" value="filtrar">
+                </div>
+            </form>
+        </div>
+    </header>
+    <main>
+        <section id="pacientes">
+            <h2>Listado de pacientes hospital La Princesa</h2>
+            <hr>
+            <div id="contador"><span>0</span></div>
+            <div class="flex">
+                <!-- <article>
+                    <h3>Nombre y el apellido del paciente</h3>
+                    <ul>
+                        <li>Edad : 34 años</li>
+                        <li>Seguridad Social: 56789</li>
+                    </ul>
+                    <div class="diagnostico">
+                        Diabetes
+                    </div>
+                </article> -->
+
+            </div>
+        </section>
+    </main>
+
+
+    <script src="./js/eventosdom.js"></script>
+</body>
+
+</html>

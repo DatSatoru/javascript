@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gestion de atributos del DOM</title>
+</head>
+
+<body>
+    <ul class="menu">
+        <li><a href="https://www.amazon.es">Amazon</a></li>
+        <la><a href="https://www.google.es">Google</a></la>
+    </ul>
+
+    <a href="http://www.iddigitalschool.com/bootcamps/">IDBOOTCAMPS</a>
+
+    <script>
+        //Capturar elemento
+
+        const enlaces = document.querySelectorAll('.menu a');
+
+        enlaces.forEach(enlace => {
+            enlace.href = "https://www.estudioclandestino.es";
+            enlace.target = "_blanck"
+            enlace.title = "Aqui trabaja el mejor profe del mundo"
+            enlace.className = "rojo"
+        })
+    </script>
+</body>
+
+</html>

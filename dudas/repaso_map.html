@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+
+<body>
+
+    <script>
+
+        const ciudades = ['Madrid', 'Barcelona', 'Valladolid', 'Bilbao', 'Vigo', 'Coruña'];
+
+        arrayMiniscula = []
+        for (let ciudad of ciudades) {
+            arrayMiniscula.push(ciudad.toLowerCase())
+        }
+        console.log(ciudades)
+        console.log(arrayMiniscula)
+
+
+        arrayMap = ciudades.map(ciudad => ciudad.toLowerCase())
+        console.log(arrayMap)
+
+
+        // otro ejemplo 
+
+        const numeros = [1, 2, 3, 4, 5, 6, 7]
+        const numerosmas2 = numeros.map(numero => numero + 2)
+        console.log(numerosmas2)
+
+
+        // otro ejmplo
+
+        const personas = [
+            { name: 'Juan', surname: 'Perez', age: 42 },
+            { name: 'Pepe', surname: 'Villuela', age: 67 },
+            { name: 'Marta', surname: 'Sanchez', age: 50 },
+            { name: 'Joaquin', surname: 'Sabina', age: 72 },
+            { name: 'Juan', surname: 'Pardo', age: 78 },
+        ]
+
+        const arrayNombreCompletos = personas.map(persona => `${persona.name} ${persona.surname}`)
+
+        console.log(arrayNombreCompletos)
+
+
+        //otro ejemplo
+
+        let html = '<ul>';
+
+        array = personas.map(persona => `<li>${persona.name}: ${persona.age}</li>`)
+        console.log(array)
+        html += array.join("");
+        console.log(html)
+        html += '<ul>'
+
+        document.write(html)
+
+
+    </script>
+
+
+</body>
+
+</html>

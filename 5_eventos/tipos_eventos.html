@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de eventos</title>
+</head>
+
+<body>
+
+
+    <div class="over">
+        <h2>Mouse Over</h2>
+        <button id="over">Over</button>
+        <p>Estoy haciendo: <span></span></p>
+    </div>
+
+    <div class="change">
+        <h2>On Change</h2>
+        <select id="selector">
+            <option value="">Selecciona algo</option>
+            <option value="red">Rojo</option>
+            <option value="green">Verde</option>
+            <option value="blue">Azul</option>
+        </select>
+        <p id="parrafo">Este parrafo debe cambiar de color en funcion de la seleccion: <span></span></p>
+    </div>
+
+    <div class="input">
+        <h2>On Input</h2>
+        <input type="text" id="miinput">
+        <p id="resultado"></p>
+    </div>
+
+
+    <div class="click">
+        <h2>On Click</h2>
+        <input type="text" id="inputClick"> <button id="btn">click</button>
+        <p id="resultadoClick"></p>
+    </div>
+
+
+    <script>
+
+        btnOver = document.querySelector('#over')
+
+
+        function onMouseOver(event) {
+            const span = document.querySelector('.over p span');
+            span.textContent = event.target.textContent
+        }
+
+        function onMouseOut() {
+            const span = document.querySelector('.over p span');
+            span.textContent = 'Out'
+        }
+
+
+        btnOver.addEventListener('mouseover', onMouseOver);
+        btnOver.addEventListener('mouseout', onMouseOut);
+
+        // ********** ///
+
+        const selector = document.querySelector('#selector');
+        const parrafo = document.querySelector('#parrafo');
+        const spanParrafo = document.querySelector('#parrafo span');
+
+        selector.addEventListener('change', seleccionarColor)
+
+        function seleccionarColor(event) {
+            parrafo.style.color = event.target.value
+            spanParrafo.textContent = event.target[event.target.options.selectedIndex].textContent
+        }
+
+        // ********** ///
+        const input = document.querySelector('#miinput');
+        const parrafo2 = document.querySelector('#resultado')
+
+        input.addEventListener('input', onInput)
+
+        function onInput(event) {
+            console.log(event.target.value);
+            parrafo2.textContent = event.target.value
+        }
+
+
+        // ********** ///
+        const inputClick = document.querySelector('#inputClick');
+        const parrafoClick = document.querySelector('#resultadoClick');
+        const btn = document.querySelector('#btn');
+
+        btn.addEventListener('click', onClick);
+        document.addEventListener('keyup', onClick)
+
+        function onClick(event) {
+            console.log(event)
+            if (event.code === 'Enter' || event.type === 'click') {
+                //de donde estraigo la informacion
+                let texto = inputClick.value
+                parrafoClick.textContent = texto;
+
+            }
+        }
+
+    </script>
+</body>
+
+</html>

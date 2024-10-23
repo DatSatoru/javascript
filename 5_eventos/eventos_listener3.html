@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+        }
+
+        li {
+            margin: 10px;
+        }
+
+        button {
+            padding: 10px;
+        }
+
+        .poligono {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            margin: 10px;
+            background-color: black;
+            transition: 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul>
+        <li><button>rotar</button></li>
+        <li><button>mover</button></li>
+        <li><button>escalar</button></li>
+        <li><button>color</button></li>
+        <li><button>radio</button></li>
+    </ul>
+
+    <div class="poligono"></div>
+
+
+    <script>
+
+        const botones = document.querySelectorAll('ul li button');
+        const poligono = document.querySelector('.poligono');
+
+        botones.forEach(boton => boton.addEventListener('click', cargarFn))
+
+        function rotar(dom) {
+            let deg = parseInt(Math.random() * 361)
+            dom.style.transform += `rotateZ(${deg}deg)`
+        }
+
+        function escalar(dom) {
+            let escala = Math.random();
+            if (escala > 0) {
+                dom.style.transform += `scale(${escala})`
+            }
+        }
+
+        function mover(dom) {
+            let posicionX = Math.random() * 600;
+            let positionY = Math.random() * 600;
+            dom.style.transform = `translate(${posicionX}px, ${positionY}px)`
+        }
+
+        function radio(dom) {
+            let radio = parseInt(Math.random() * 51)
+            dom.style.borderRadius = radio + "%"
+        }
+
+        function color(dom) {
+            arrayColores = ['red', 'blue', 'green', 'violet', 'indigo', 'gold', 'orange', 'lightskyblue', 'tomato']
+            let posicion = parseInt(Math.random() * arrayColores.length)
+            dom.style.backgroundColor = arrayColores[posicion]
+        }
+
+        function cargarFn(event) {
+
+            switch (event.target.textContent) {
+                case 'rotar':
+                    rotar(poligono)
+                    break;
+
+                case 'escalar':
+                    escalar(poligono)
+                    break;
+
+                case 'mover':
+                    mover(poligono)
+                    break;
+
+                case 'color':
+                    color(poligono)
+                    break;
+
+                case 'radio':
+                    radio(poligono)
+                    break;
+
+            }
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

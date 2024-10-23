@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        const personas = [
+            { nombre: "Ana", edad: 25 },
+            { nombre: "Luis", edad: 30 },
+            { nombre: "María", edad: 25 },
+            { nombre: "Carlos", edad: 30 },
+            { nombre: "Lucía", edad: 22 }
+        ];
+
+        const conteoPorEdad = personas.reduce((acumulador, persona) => {
+            // Usa la edad como clave
+            if (acumulador[persona.edad]) { // 
+                acumulador[persona.edad] += 1; // Incrementa el conteo
+            } else {
+                acumulador[persona.edad] = 1; // Inicializa el conteo
+            }
+            return acumulador; // Retorna el acumulador para la siguiente iteración
+        }, {}); // El valor inicial es un objeto vacío
+
+        console.log(conteoPorEdad); // Salida: { '22': 1, '25': 2, '30': 2 }
+
+
+        const objt = { '25': 2, '30': 2, '22': 1 }
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reduce</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+        const personas = [
+            { name: 'Juan', surname: 'Perez', age: 42 },
+            { name: 'Pepe', surname: 'Villuela', age: 67 },
+            { name: 'Marta', surname: 'Sanchez', age: 50 },
+            { name: 'Joaquin', surname: 'Sabina', age: 72 },
+            { name: 'Juan', surname: 'Pardo', age: 78 },
+        ]
+
+        let suma = 0;
+
+        for (let numero of numeros) {
+            suma += numero;
+        }
+
+        console.log(suma)
+
+        let sumaEdad = 0;
+
+        for (let persona of personas) {
+            sumaEdad += persona.age;
+        }
+
+        console.log(sumaEdad)
+
+
+        let sumaReduce = numeros.reduce((acumulador, valorActual) => acumulador * valorActual)
+        console.log(sumaReduce)
+
+        let sumaEdadReduce = personas.reduce((acumulador, valorActual) => acumulador + valorActual.age, 0)
+
+        console.log(sumaEdadReduce)
+
+
+    </script>
+
+</body>
+
+</html>

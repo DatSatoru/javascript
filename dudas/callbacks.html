@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+
+        const alumnos = [
+            { id: 1, name: 'Yago', edad: 25 },
+            { id: 2, name: 'Nuria', edad: 24 },
+            { id: 3, name: 'Juan', edad: 42 }
+        ]
+
+        function getNamefindByEdad(list, age) {
+            const find = list.find(student => student.edad === age)
+            return find.name
+        }
+
+
+        function saludar(name) {
+            document.write(`<h1>Hola Bienvenido, ${name}, aqui tienes acceso a todos recursos`)
+        }
+
+        saludar(getNamefindByEdad(alumnos, 24))
+
+
+        // callback de declaracion
+
+        let alumno = alumnos.find(getAlumno)
+
+        function getAlumno(student) {
+            return student.edad > 24
+        }
+        console.log(alumno);
+    </script>
+
+
+
+</body>
+
+</html>

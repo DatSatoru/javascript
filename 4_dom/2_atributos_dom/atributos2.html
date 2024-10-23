@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <figure>
+        <img src="./images/img-01.jpg" alt="Cubata">
+        <figcaption>Sujetame el cubata</figcaption>
+    </figure>
+
+    <script>
+        const arrayImagenes = [
+            { id: 1, url: "./images/img-01.jpg", title: "Sujetame el cubata" },
+            { id: 2, url: "./images/img-02.jpg", title: "Daikiri de fresa" },
+            { id: 3, url: "./images/img-03.jpg", title: "Cerveza en copa" },
+            { id: 4, url: "./images/img-04.jpg", title: "Hamburguesote" },
+            { id: 5, url: "./images/img-05.jpg", title: "Ensalada Caesar Fit" }
+        ]
+
+        //capturamos los elementos con los que vamos a interactuar
+        const imgDom = document.querySelector('figure img');
+        const figcaptionDom = document.querySelector('figure figcaption')
+
+        function cambiarImagen(unaImagen, seccionDom, textoDom) {
+            seccionDom.src = unaImagen.url
+            seccionDom.alt = unaImagen.title
+            textoDom.textContent = unaImagen.title
+        }
+
+        //cambiarImagen(arrayImagenes[3], imgDom, figcaptionDom)
+
+
+        //JavaScript posee unas funciones que me permiten esperar un tiempo paraejecutar una funcion. son las llamadas funciones intervalidas o tiempo.     setInterval(), setTimeout().
+
+        //Lasdos funciones reciben dos parametros, el primero un callback que van a ejecutar en el tiempo descito como segundo parametro. Segundo parametro el tiempo en miliseguindos
+
+        //setInterval repite la funcion callback cada x milisegundos
+        //setTimeOut esperax milisegundos a ejecutar el calback y no lo vuelve a ejecutar mas
+
+        //ambas funciones es recomendable guardarlas en variables o constantes
+        let cont = 0;
+        const intervalo = setInterval(() => {
+            if (cont >= arrayImagenes.length) {
+                cont = 0
+            }
+            cambiarImagen(arrayImagenes[cont], imgDom, figcaptionDom);
+            cont++;
+        }, 2000)
+    </script>
+</body>
+
+</html>

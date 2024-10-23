@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cuadrado {
+            width: 100px;
+            height: 100px;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cuadrado green"></div>
+
+    <script>
+        const div = document.querySelector('.cuadrado')
+
+        div.className = 'cuadrado red'
+    </script>
+</body>
+
+</html>

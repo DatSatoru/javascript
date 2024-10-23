@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Listener</title>
+    <style>
+        #mipoligono {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%;
+            transition: 1s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul id="poligonos"></ul>
+
+    <div id="mipoligono"></div>
+
+
+    <script>
+
+        const poligonos = [
+            {
+                name: 'poligono 1',
+                width: '250px',
+                height: '100px',
+                borderRadius: '0px',
+                backgroundColor: 'tomato',
+                border: '1px solid black',
+                margin: '10px'
+            },
+            {
+                name: 'poligono 2',
+                width: '100px',
+                height: '100px',
+                borderRadius: '50%',
+                backgroundColor: 'blue',
+                border: '0px',
+                margin: '10px'
+            },
+            {
+                name: 'poligono 3',
+                width: '300px',
+                height: '300px',
+                borderRadius: '20px',
+                backgroundColor: 'violet',
+                border: '3px dotted black',
+                margin: '10px'
+            }
+        ]
+
+
+        const ul = document.querySelector('#poligonos');
+        const mipoligono = document.querySelector('#mipoligono');
+
+        function cambiarFigure(event) {
+            for (let key in event.target.dataset) {
+                mipoligono.style[key] = event.target.dataset[key]
+            }
+
+            /* mipoligono.style.backgroundColor = event.target.dataset.backgroundColor
+            mipoligono.style.width = event.target.dataset.width
+            mipoligono.style.height = event.target.dataset.height
+            mipoligono.style.borderRadius = event.target.dataset.borderRadius
+            mipoligono.style.border = event.target.dataset.border
+            mipoligono.style.margin = event.target.dataset.margin*/
+        }
+
+        function printOneFigure(figure, dom) {
+            const li = document.createElement('li')
+            li.textContent = figure.name
+            for (let key in figure) {
+                if (key !== 'name') {
+                    li.dataset[key] = figure[key]
+                }
+            }
+            li.addEventListener('click', cambiarFigure)
+            dom.appendChild(li);
+        }
+
+
+        function printAllFigures(list, dom) {
+            list.forEach(figure => printOneFigure(figure, dom))
+        }
+
+        printAllFigures(poligonos, ul)
+
+
+    </script>
+
+
+</body>
+
+</html>

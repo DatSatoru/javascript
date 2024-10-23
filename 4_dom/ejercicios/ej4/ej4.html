@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .circulo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: tomato;
+            position: absolute;
+            transition: 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="circulo">
+
+    </div>
+
+    <script>
+        const posiciones = [
+            { x: 120, y: 300 },
+            { x: 530, y: 100 },
+            { x: 40, y: 10 },
+            { x: 400, y: 400 },
+            { x: 90, y: 130 },
+        ]
+
+        //mover la pelota de forma continua por el escenario esas coordenadas. Cuando acabe el array de coordenadas que vuelva a empezar
+
+        const circuloDom = document.querySelector('.circulo')
+
+        function cambiarPosicion(seccionDom, listaPosiciones) {
+
+            seccionDom.style.left = `${listaPosiciones.x}px`;
+            seccionDom.style.top = `${listaPosiciones.y}px`;
+
+        }
+        //cambiarPosicion(circuloDom, posiciones[0])
+
+        let cont = 0;
+        const intervalo = setInterval(() => {
+            if (cont >= posiciones.length) {
+                cont = 0
+            }
+            cambiarPosicion(circuloDom, posiciones[cont]);
+            cont++;
+        }, 2000)
+
+
+    </script>
+</body>
+
+</html>

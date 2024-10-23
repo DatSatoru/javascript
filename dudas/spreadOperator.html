@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        const numeros = [1, 2, 3, 4, 5, 56, 6]
+        const numeros2 = [...numeros]; // spread operator realiza una copia de un array en otro. Para romper la referencia del paso de variable
+        let valor = 2;
+        let valor2 = valor;
+        valor2 = 5;
+
+        console.log(valor)
+        console.log(valor2)
+
+
+        numeros2[5] = 7;
+        console.log('numeros', numeros)
+        console.log('numeros2', numeros2)
+
+
+
+    </script>
+
+</body>
+
+</html>

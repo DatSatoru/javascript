@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#escenario {
+    border: 1px solid black;
+    width: 816px;
+    margin: 0 auto;
+    height: 768px;
+    background-image: url(../images/fondo.jpg);
+    background-position: 0 0;
+    transition: 0.2s;
+    overflow: hidden;
+    position: relative;
+
+}
+
+#mario {
+    position: absolute;
+    bottom: 30px;
+}
+
+.seta {
+    width: 100px;
+    height: 100px;
+    background-image: url(https://art.pixilart.com/909f28ec737d033.png?v=1526669287);
+    position: absolute;
+    background-size: cover;
+    bottom: 30px;
+    right: 0px;
+}

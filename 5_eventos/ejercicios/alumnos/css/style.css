@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    background-color: lightpink;
+    padding: 30px 10px;
+
+    select {
+        padding: 10px;
+        width: 100%;
+    }
+}
+
+main section {
+    padding: 30px 10px;
+}
+
+.list li {
+    background-color: beige;
+    padding: 15px;
+    margin: 10px 0px;
+    border: 2px solid black;
+    box-shadow: 1px 1px 3px #ccc;
+    border-radius: 10px;
+
+    .aprobado {
+        background-color: green;
+        color: white;
+        padding: 10px;
+    }
+
+    .suspenso {
+        background-color: red;
+        color: white;
+        padding: 10px;
+    }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setAttribute</title>
+</head>
+
+<body>
+
+    <a href="">uno</a>
+    <a href="">dos</a>
+    <a href="">tres</a>
+    <a href="">cuatro</a>
+    <a href="">cinco</a>
+
+
+    <script>
+
+        //me permita modificar el href, añadir un title, y modicar los estilos de los enlaces padding 10px, display block, color rojo, background-color negro.
+
+        const enlaces = document.querySelectorAll('a');
+
+        for (let enlace of enlaces) {
+            /* enlace.style.color = 'red';
+            enlace.style.backgroundColor = 'black';
+            enlace.style.padding = '10px';
+            enlace.style.marginBottom = '10px';
+            enlace.style.display = 'block';
+            */
+            enlace.setAttribute('style', 'background-color: black; padding: 10px; color: red; margin-bottom: 10px; display: block');
+            /* enlace.title = 'texto del title' */
+            enlace.setAttribute('title', 'texto del title');
+            enlace.href = 'http://www.google.com'
+            //crear atributos que no existan
+            //enlace.className = "caja"
+            enlace.setAttribute('class', 'caja')
+
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

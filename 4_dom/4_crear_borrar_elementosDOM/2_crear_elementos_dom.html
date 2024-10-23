@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="productos">
+        <!-- <article class="rojo">
+            <h3>Titulo</h3>
+            <ul>
+                <li>Stock: disponible</li>
+                <li>Precio: 12€</li>
+            </ul>
+        </article> -->
+    </section>
+
+    <script>
+        const productos =
+            [
+                {
+                    title: "Laptop Gamer",
+                    stock: true,
+                    price: 1200.00
+                },
+                {
+                    title: "Smartphone",
+                    stock: true,
+                    price: 800.00
+                },
+                {
+                    title: "Auriculares Bluetooth",
+                    stock: false,
+                    price: 150.00
+                },
+                {
+                    title: "Teclado Mecánico",
+                    stock: true,
+                    price: 100.00
+                },
+                {
+                    title: "Monitor 4K",
+                    stock: false,
+                    price: 400.00
+                }
+
+            ]
+        const sectionProducts = document.querySelector('.productos');
+
+        function printOneProduct(product, dom) {
+
+            // Primer paso, crear etiquetas
+            const article = document.createElement('article');
+            const h3 = document.createElement('h3')
+            const ul = document.createElement('ul')
+            const li1 = document.createElement('li')
+            const li2 = document.createElement('li')
+
+            //Segundo paso, llenar de contenido y poner los atributos que tenga
+            article.classList.add('rojo');
+            h3.textContent = product.title;
+            li1.textContent = `Stock: ${product.stock ? 'Disponible' : 'No disponible'}`
+            li2.textContent = `Precio: ${product.price}€`
+
+            ul.append(li1, li2)
+            article.append(h3, ul)
+            dom.appendChild(article)
+        }
+
+        function printAllProducts(productList, dom) {
+            productList.forEach(product => printOneProduct(product, dom))
+        }
+
+        printAllProducts(productos, sectionProducts)
+
+    </script>
+</body>
+
+</html>

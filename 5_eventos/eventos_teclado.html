@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos de teclado</title>
+    <style>
+        .coche {
+            width: 150px;
+            transform: rotate(180deg);
+            transition: margin 0.3s;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <figure class="coche">
+        <img src="https://www.deividart.com/libres/zycars-coche_camaro-2.png" alt="camaro">
+    </figure>
+
+
+    <script>
+        const coche = document.querySelector('.coche')
+        let avanceX = 0;
+        let avanceY = 0;
+
+        ///los eventos de teclado no se adjudican a ningun elementos, solo se aplican sobre el documento
+        document.addEventListener('keypress', detectarTecla);
+
+        function detectarTecla(event) {
+            switch (event.code) {
+                case 'KeyA':
+                    moverCocheX(-40, coche)
+                    break;
+
+                case 'KeyW':
+                    moverCocheY(-40, coche)
+                    break;
+
+                case 'KeyD':
+                    moverCocheX(40, coche)
+                    break;
+
+                case 'KeyS':
+                    moverCocheY(40, coche)
+                    break;
+            }
+        }
+
+
+
+        function moverCocheX(vel, obj) {
+            avanceX += vel;
+            if (avanceX <= 0) {
+                avanceX = 0;
+            } else if (avanceX >= window.innerWidth - 150) {
+                avanceX = window.innerWidth - 150;
+            }
+            obj.style.marginLeft = avanceX + 'px';
+            let deg = vel >= 0 ? '180deg' : '0deg';
+            obj.style.transform = `rotate(${deg})`
+        }
+
+        function moverCocheY(vel, obj) {
+            avanceY += vel;
+            if (avanceY <= 0) {
+                avanceY = 0;
+            } else if (avanceY >= window.innerHeight - 87) {
+                avanceY = window.innerHeight - 87;
+            }
+            obj.style.marginTop = avanceY + 'px';
+            let deg = vel >= 0 ? '270deg' : '90deg';
+            obj.style.transform = `rotate(${deg})`
+        }
+
+    </script>
+</body>
+
+</html>
